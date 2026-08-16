@@ -24,7 +24,7 @@ export const Navbar = ({ className }: { className?: string }) => {
   ];
 
   return (
-    <Container className={cn("p-4", className)}>
+    <Container className={cn("py-2", className)}>
       <nav>
         {/* // logo and nav lists */}
         <div className="flex items-center justify-between text-neutral-900 dark:text-neutral-100">
