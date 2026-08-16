@@ -8,12 +8,7 @@ export const Container = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={cn(
-        "relative mx-auto w-full max-w-2xl bg-white dark:bg-black",
-        className,
-      )}
-    >
+    <div className={cn("relative mx-auto w-full max-w-2xl", className)}>
       {children}
     </div>
   );

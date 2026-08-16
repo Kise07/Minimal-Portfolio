@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
 import { Container } from "../core/container";
+import { cn } from "../../../lib/utils";
 
-export const Navbar = () => {
+export const Navbar = ({ className }: { className?: string }) => {
   const navItems = [
     {
       title: "Home",
@@ -23,7 +24,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <Container className="p-4">
+    <Container className={cn("p-4", className)}>
       <nav>
         {/* // logo and nav lists */}
         <div className="flex items-center justify-between text-neutral-900 dark:text-neutral-100">

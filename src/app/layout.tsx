@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/ui/navbar";
-import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,16 +19,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable} antialiased bg-neutral-100 antialiased [--pattern-fg:var(--color-neutral-950)]/5 dark:bg-neutral-700`}
+      className={`${poppins.variable} antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
       </body>

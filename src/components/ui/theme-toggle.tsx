@@ -9,15 +9,15 @@ export const ModeToggle = () => {
   return (
     <button
       onClick={SWITCH}
-      className="size-4 flex items-center justify-center relative border border-dashed rounded-sm border-neutral-500 p-1.5 dark:border-neutral-100"
+      className="size-8 flex items-center justify-center relative border rounded-md border-neutral-500 p-2 dark:border-neutral-100"
     >
       <SunIcon
-        size={14}
-        className="rotate-0 absolute inset-0 scale-100 transition-all duration-200 dark:rotate-90 dark:scale-0"
+        size={15}
+        className="m-auto rotate-0 absolute inset-0 scale-100 transition-all duration-300 dark:rotate-90 dark:scale-0"
       />
       <MoonIcon
-        size={14}
-        className="rotate-90 absolute inset-0 scale-0 transition-all duration-200 dark:rotate-0 dark:scale-100"
+        size={15}
+        className="m-auto rotate-90 absolute inset-0 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100"
       />
     </button>
   );

@@ -1,13 +1,18 @@
-import { Scales } from "@/components/core/scales";
-import { Container } from "../components/core/container";
 import { Heading } from "@/components/core/heading";
-import Image from "next/image";
+import { Navbar } from "@/components/ui/navbar";
+import { Container } from "../components/core/container";
+import { ScalesY } from "@/components/core/scaleY";
+import { ScaleX } from "@/components/core/scaleX";
+import { Profile } from "@/components/ui/profile";
 
 export default function Page() {
   return (
     <div className="flex items-start justify-start">
       <Container className="min-h-screen">
-        <Heading className="mt-10">Shabaz Ansari</Heading>
+        <ScaleX />
+        <Navbar />
+        <ScalesY />
+        <Profile />
       </Container>
     </div>
   );
