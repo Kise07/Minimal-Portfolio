@@ -1,10 +1,10 @@
 import { Container } from "@/components/core/container";
-import { SkewedButton } from "@/components/work/react-animations/skewed-button";
+import { SkewedButtonSecond } from "@/components/work/react-animations/skewed-button-types";
 
 export default function Work() {
   return (
-    <Container className="flex items-center justify-center m-auto mt-32">
-      <SkewedButton />
+    <Container className="flex items-center justify-center">
+      <SkewedButtonSecond />
     </Container>
   );
 }
