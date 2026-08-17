@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
 import { motion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 
 export const NavSmooth = () => {
