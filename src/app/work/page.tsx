@@ -1,10 +1,10 @@
 import { Container } from "@/components/core/container";
-import { SubmitButton } from "@/components/work/animationSequence/animate-submit-btn";
+import { StackCards } from "@/components/work/arc/arc-stack-cards";
 
 export default function Work() {
   return (
-    <Container className="flex items-center justify-center m-auto mt-32">
-      <SubmitButton />
+    <Container className="flex items-center justify-center m-auto">
+      <StackCards />
     </Container>
   );
 }
