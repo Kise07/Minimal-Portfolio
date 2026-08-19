@@ -1,10 +1,10 @@
 import { Container } from "@/components/core/container";
-import { AnimateBackground } from "@/components/work/animationSequence/animate-bg";
+import { SubmitButton } from "@/components/work/animationSequence/animate-submit-btn";
 
 export default function Work() {
   return (
-    <Container className="flex items-center justify-center m-auto">
-      <AnimateBackground />
+    <Container className="flex items-center justify-center m-auto mt-32">
+      <SubmitButton />
     </Container>
   );
 }
