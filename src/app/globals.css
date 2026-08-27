@@ -14,6 +14,21 @@
   --font-poppins: var(--font-poppins);
   --text-primary: var(--color-neutral-800);
   --text-secondary: var(--color-neutral-500);
+
+  --animate-orbit: orbit var(--orbit-duration) linear infinite;
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(var(--initial-position, 0deg))
+        translate(var(--translate-position))
+        rotate(calc(-1 * var(--initial-position, 0deg)));
+    }
+    100% {
+      transform: rotate(calc(var(--initial-position, 0deg) + 360deg))
+        translate(var(--translate-position))
+        rotate(calc(-1 * (var(--initial-position, 0deg) + 360deg)));
+    }
+  }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
