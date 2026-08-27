@@ -64,7 +64,7 @@ const Third = () => {
       <motion.div
         whileHover={rotate}
         transition={{
-          tyoe: "spring",
+          type: "spring",
           stiffness: 300,
           damping: 10,
         }}

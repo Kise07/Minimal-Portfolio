@@ -26,6 +26,7 @@ export const NavbarLayout = () => {
   ];
 
   const [isActive, setIsActive] = useState<string | null>(null);
+
   return (
     <div>
       <nav>
@@ -33,11 +34,11 @@ export const NavbarLayout = () => {
           <button
             key={item.href}
             type="button"
-            onClick={() => setActiveLink(item.href)}
+            onClick={() => setIsActive(item.href)}
             className="relative rounded-full px-4 py-2 text-sm font-medium text-neutral-600 transition-colors duration-200 hover:text-neutral-950"
           >
-            {isActiva(item.href) ? <span /> : null}
-            <span className="relative z-20">{item.label}</span>
+            {isActive === item.href ? <span /> : null}
+            <span className="relative z-20">{item.title}</span>
           </button>
         ))}
       </nav>
