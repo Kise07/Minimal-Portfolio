@@ -1,15 +1,19 @@
 "use client";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { cn } from "../../../lib/utils";
 
-export const ModeToggle = () => {
+export const ModeToggle = ({ className }: { className?: string }) => {
   const { resolvedTheme, setTheme } = useTheme();
   const SWITCH = () => setTheme(resolvedTheme === "dark" ? "light" : "dark");
 
   return (
     <button
       onClick={SWITCH}
-      className="size-8 flex items-center justify-center relative border rounded-md border-neutral-500 p-2 dark:border-neutral-100"
+      className={cn(
+        "size-8 flex items-center justify-center relative border rounded-md border-neutral-500 p-2 dark:border-neutral-100",
+        className,
+      )}
     >
       <SunIcon
         size={15}
