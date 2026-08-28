@@ -6,14 +6,12 @@ import { Container } from "../components/core/container";
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center">
-      <Container className="px-4 min-h-screen">
-        <ScaleX />
-        <Navbar />
-        <ScalesY />
-        <Profile />
-        <ScalesY className="h-8 my-5" />
-      </Container>
-    </div>
+    <Container className="px-4 min-h-screen">
+      <ScaleX />
+      <Navbar />
+      <ScalesY />
+      <Profile />
+      <ScalesY className="h-8 my-5" />
+    </Container>
   );
 }
