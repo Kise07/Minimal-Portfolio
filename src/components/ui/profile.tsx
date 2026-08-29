@@ -1,6 +1,6 @@
 import { cn } from "../../../lib/utils";
 import { Heading } from "../core/heading";
-import { HoverWave } from "../work/minimal/hover-wave";
+import Flipper from "../work/minimal/text-flipper";
 import { ModeToggle } from "./theme-toggle";
 
 export const Profile = ({ className }: { className?: string }) => {
@@ -12,11 +12,13 @@ export const Profile = ({ className }: { className?: string }) => {
       )}
     >
       <div className="flex items-start justify-between w-full">
-        <img src="/ava.png" alt="avatar" className="size-30" />
+        <div className="flex items-center gap-4">
+          <img src="/ava.png" alt="avatar" className="size-30" />
+        </div>
         <ModeToggle />
       </div>
       <Heading>Shabaz Ansari</Heading>
-      <HoverWave />
+      <Flipper />
     </section>
   );
 };
