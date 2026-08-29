@@ -1,35 +1,56 @@
 "use client";
+import { IconBrandGithub, IconLink } from "@tabler/icons-react";
 import {
   AnimatePresence,
-  Transition,
-  Variant,
   motion,
   MotionProps,
+  Transition,
+  Variant,
 } from "motion/react";
-import { cn } from "../../../../lib/utils";
 import { useState } from "react";
+import { cn } from "../../../../lib/utils";
 
 export function TabsTransitionPanel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const ITEMS = [
     {
-      title: "Aesthetics",
-      subtitle: "Refining Visual Harmony",
-      content:
-        "Explore the principles of motion aesthetics that enhance the visual appeal of interfaces. Learn to balance timing, easing, and the flow of motion to create seamless user experiences.",
+      name: "job board mvp",
+      description: `junior- friendly job opportunities from hacker news, updated daily.`,
+      tech: [
+        "next.js 16",
+        "react 19",
+        "typescript",
+        "tailwind css v4",
+        "node.js",
+        "express 5",
+        "redis",
+        "vercel",
+        "render",
+      ],
+      link: "https://job-board-mvp-f4n8.vercel.app/",
+      github: "https://github.com/kise07/jobboardmvp",
+      highlights: [
+        "full-stack development (next.js + express)",
+        "redis caching (95% fewer api calls)",
+        "<100ms api response times",
+        "automated daily job fetching with cron",
+        "custom domain with https/ssl",
+      ],
     },
     {
-      title: "Art",
-      subtitle: "Narrative and Expression",
-      content:
-        "Delve into how motion can be used as an artistic tool to tell stories and evoke emotions, making digital interactions feel more human and expressive.",
-    },
-    {
-      title: "Technique",
-      subtitle: "Mastering Motion Tools",
-      content:
-        "Gain proficiency in advanced techniques such as physics-based animations, 3D transformations, and complex sequencing to elevate your design skills and implementation.",
+      name: "link bio",
+      description: `a simple link aggregator to showcase all your
+ important links in one place.`,
+      tech: ["html", "css", "javascript", "vanta.js", "vercel"],
+      link: "https://link-in-bio-one-peach.vercel.app/",
+      github: "https://github.com/kise07/link-in-bio",
+      highlights: [
+        "responsive design",
+        "easy to customize",
+        "fast deployment",
+        "animated backgrounds with vanta.js",
+      ],
     },
   ];
 
@@ -40,13 +61,13 @@ export function TabsTransitionPanel() {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`rounded-md px-3 py-1 text-sm font-medium ${
+            className={`capitalize rounded-md px-3 py-1 text-sm font-medium ${
               activeIndex === index
                 ? "bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
                 : "bg-zinc-100 text-zinc-600 dark:bg-zinc-700 dark:text-zinc-400"
             }`}
           >
-            {item.title}
+            {item.name}
           </button>
         ))}
       </div>
@@ -61,11 +82,47 @@ export function TabsTransitionPanel() {
           }}
         >
           {ITEMS.map((item, index) => (
-            <div key={index} className="py-2">
-              <h3 className="mb-2 font-medium text-zinc-800 dark:text-zinc-100">
-                {item.subtitle}
-              </h3>
-              <p className="text-zinc-600 dark:text-zinc-400">{item.content}</p>
+            <div
+              key={index}
+              className="py-2 space-y-3 text-zinc-600 dark:text-zinc-400"
+            >
+              <div className="flex gap-4 text-sm">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-zinc-900 dark:text-zinc-100 hover:underline-none border rounded-md p-1"
+                >
+                  <IconLink className="size-4" />
+                </a>
+                {item.github && (
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-zinc-900 dark:text-zinc-100 hover:underline-none border rounded-md p-1"
+                  >
+                    <IconBrandGithub className="size-4" />
+                  </a>
+                )}
+              </div>
+
+              <p className="text-xl">{item.description}</p>
+              <ul className="space-y-1 text-xs">
+                {item.highlights.map((point, i) => (
+                  <li key={i}>• {point}</li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-1.5">
+                {item.tech.map((t, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-full text-[11px]"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </TransitionPanel>
