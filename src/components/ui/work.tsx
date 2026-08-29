@@ -19,6 +19,44 @@ import { CardsGrid } from "../work/layouts/cards-grid-layout";
 import { LayoutCards } from "../work/layouts/layout-cards";
 import { ExpendedButtons } from "../work/layouts/expanded-btn";
 import { cn } from "../../../lib/utils";
+import { RefreshIcon } from "../svgs/svgs";
+
+const WorkCard = ({
+  name,
+  category,
+  component: Component,
+}: {
+  name: string;
+  category: string;
+  component: React.ComponentType;
+}) => {
+  const [key, setKey] = useState(0);
+
+  return (
+    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-4">
+      <div className="flex items-center justify-center min-h-[200px] overflow-hidden rounded-lg">
+        <Component key={key} />
+      </div>
+      <div className="flex items-center justify-between mt-3">
+        <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          {name}
+        </h3>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-neutral-500 dark:text-neutral-400">
+            {category}
+          </span>
+          <button
+            onClick={() => setKey((k) => k + 1)}
+            className="p-1 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+            aria-label={`Refresh ${name}`}
+          >
+            <RefreshIcon />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const WORKS = [
   { name: "Animate Text", category: "Text Animation", component: AnimateText },
@@ -127,23 +165,8 @@ export const Works = ({ className }: { className?: string }) => {
           {/* Works tab — scrollable card list */}
           <div className="overflow-y-auto scrollbar-none max-h-[calc(100vh-12rem)]">
             <div className="grid grid-cols-1 gap-4 py-2">
-              {WORKS.map(({ name, category, component: Component }) => (
-                <div
-                  key={name}
-                  className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-4"
-                >
-                  <div className="flex items-center justify-center min-h-[200px] overflow-hidden rounded-lg">
-                    <Component />
-                  </div>
-                  <div className="flex items-center justify-between mt-3">
-                    <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                      {name}
-                    </h3>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                      {category}
-                    </span>
-                  </div>
-                </div>
+              {WORKS.map((work) => (
+                <WorkCard key={work.name} {...work} />
               ))}
             </div>
           </div>
