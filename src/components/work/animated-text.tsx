@@ -30,7 +30,7 @@ export const AnimateText = () => {
   return (
     <div
       ref={scope}
-      className="max-w-4xl mx-auto font-bold text-4xl text-white"
+      className="max-w-4xl mx-auto font-bold text-4xl text-neutral-700 dark:text-neutral-400"
     >
       {text.split(" ").map((word, index) => (
         <motion.span
