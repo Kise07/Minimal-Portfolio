@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utils";
 import { Heading } from "../core/heading";
 import Flipper from "../work/minimal/text-flipper";
+import { TabsTransitionPanel } from "../work/minimal/transition-panel";
 import { ModeToggle } from "./theme-toggle";
 
 export const Profile = ({ className }: { className?: string }) => {
@@ -19,6 +20,7 @@ export const Profile = ({ className }: { className?: string }) => {
       </div>
       <Heading>Shabaz Ansari</Heading>
       <Flipper />
+      <TabsTransitionPanel />
     </section>
   );
 };
