@@ -1,17 +1,13 @@
-import { ScaleX } from "@/components/core/scaleX";
-import { ScalesY } from "@/components/core/scaleY";
-import { Navbar } from "@/components/ui/navbar";
 import { Profile } from "@/components/ui/profile";
-import { Container } from "../components/core/container";
+import { Works } from "@/components/ui/work";
 
-export default function Page() {
+export default function Work() {
   return (
-    <Container className="px-4 min-h-screen">
-      <ScaleX />
-      <Navbar />
-      <ScalesY />
-      <Profile />
-      <ScalesY className="h-8 my-5" />
-    </Container>
+    <div className="m-4 relative overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="md:sticky md:top-4 md:h-[calc(100vh-2rem)]">
+        <Profile />
+      </div>
+      <Works />
+    </div>
   );
 }

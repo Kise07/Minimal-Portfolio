@@ -11,7 +11,7 @@ export const ModeToggle = ({ className }: { className?: string }) => {
     <button
       onClick={SWITCH}
       className={cn(
-        "size-8 flex items-center justify-center relative border rounded-md border-neutral-500 p-2 dark:border-neutral-100",
+        "size-6 flex items-center justify-center relative border rounded-md border-neutral-200 dark:border-neutral-600",
         className,
       )}
     >
