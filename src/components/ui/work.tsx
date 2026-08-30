@@ -121,7 +121,7 @@ export const Works = ({ className }: { className?: string }) => {
   return (
     <div className={cn("m-4 col-span-2 flex flex-col", className)}>
       {/* NavSmooth-style sliding pill tabs */}
-      <div className="mb-4 bg-neutral-100 dark:bg-neutral-800 rounded-full p-1 flex w-fit">
+      <div className="mb-4 bg-neutral-200 dark:bg-neutral-800 rounded-full p-1 flex w-fit">
         {TABS.map((tab, index) => (
           <button
             key={tab}
@@ -133,16 +133,16 @@ export const Works = ({ className }: { className?: string }) => {
             {(hoveredTab === index || activeTab === index) && (
               <motion.div
                 layoutId="work-tab"
-                className="absolute inset-0 rounded-full bg-white dark:bg-neutral-700"
+                className="absolute inset-0 rounded-full bg-neutral-900 dark:bg-neutral-100"
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
               />
             )}
             <span
               className={cn(
-                "relative z-20 transition-colors duration-200",
+                "relative z-20 px-10 py-20 transition-colors duration-200",
                 activeTab === index
-                  ? "text-neutral-900 dark:text-neutral-100"
-                  : "text-neutral-500 dark:text-neutral-400",
+                  ? "text-neutral-100 text-sm font-medium dark:text-neutral-900"
+                  : "text-neutral-500 text-sm font-medium dark:text-neutral-400",
               )}
             >
               {tab}

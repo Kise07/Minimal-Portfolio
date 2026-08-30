@@ -7,7 +7,7 @@ export default function Work() {
       <div className="md:sticky md:top-4 md:h-[calc(100vh-2rem)]">
         <Profile />
       </div>
-      <Works />
+      <Works className="m-6" />
     </div>
   );
 }

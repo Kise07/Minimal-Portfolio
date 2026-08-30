@@ -8,7 +8,7 @@ export const Profile = ({ className }: { className?: string }) => {
   return (
     <section
       className={cn(
-        "m-4 flex flex-col items-baseline justify-start gap-4",
+        "m-6 flex flex-col items-baseline justify-start gap-4",
         className,
       )}
     >
