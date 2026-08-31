@@ -1,8 +1,16 @@
+import Link from "next/link";
 import { cn } from "../../../lib/utils";
 import { Heading } from "../core/heading";
 import Flipper from "../work/minimal/text-flipper";
 import { TabsTransitionPanel } from "../work/minimal/transition-panel";
 import { ModeToggle } from "./theme-toggle";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+} from "@tabler/icons-react";
+import { Dots } from "../work/minimal/dot-patterns";
+import { UsersLinks } from "../work/minimal/links";
 
 export const Profile = ({ className }: { className?: string }) => {
   return (
@@ -13,8 +21,11 @@ export const Profile = ({ className }: { className?: string }) => {
       )}
     >
       <div className="flex items-start justify-between w-full">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center gap-4">
           <img src="/ava.png" alt="avatar" className="size-30" />
+          <span>
+            Connect with me <UsersLinks />
+          </span>
         </div>
         <ModeToggle />
       </div>
