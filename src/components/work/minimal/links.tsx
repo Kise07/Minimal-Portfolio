@@ -10,7 +10,7 @@ export const UsersLinks = () => {
   return (
     <Dots className="px-4 py-2">
       <div className="flex items-center justify-center gap-4">
-        <Link href="https://x.com/kise07">
+        <Link href="https://x.com/sebas_azmi07">
           <IconBrandX className="size-5 text-neutral-500 hover:text-neutral-900" />
         </Link>
         <Link href="https://linkedin.com/in/kise07">
