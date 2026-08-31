@@ -1,16 +1,9 @@
-import Link from "next/link";
 import { cn } from "../../../lib/utils";
 import { Heading } from "../core/heading";
+import { UsersLinks } from "../work/minimal/links";
 import Flipper from "../work/minimal/text-flipper";
 import { TabsTransitionPanel } from "../work/minimal/transition-panel";
 import { ModeToggle } from "./theme-toggle";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandX,
-} from "@tabler/icons-react";
-import { Dots } from "../work/minimal/dot-patterns";
-import { UsersLinks } from "../work/minimal/links";
 
 export const Profile = ({ className }: { className?: string }) => {
   return (
