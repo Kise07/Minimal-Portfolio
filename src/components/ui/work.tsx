@@ -20,6 +20,7 @@ import { LayoutCards } from "../work/layouts/layout-cards";
 import { ExpendedButtons } from "../work/layouts/expanded-btn";
 import { cn } from "../../../lib/utils";
 import { RefreshIcon } from "../svgs/svgs";
+import { IconBrandGithub, IconLink } from "@tabler/icons-react";
 
 const WorkCard = ({
   name,
@@ -112,6 +113,95 @@ const WORKS = [
   },
 ];
 
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: (typeof PROJECTS)[number];
+  index: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -50, filter: "blur(4px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ duration: 0.2, ease: "easeInOut", delay: index * 0.1 }}
+      className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-4"
+    >
+      <div className="overflow-hidden rounded-lg">
+        <video
+          src={project.videoUrl}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full aspect-video object-cover"
+        />
+      </div>
+      <div className="flex items-center justify-between mt-3">
+        <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          {project.name}
+        </h3>
+        <div className="flex items-center gap-2">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="p-1 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+          >
+            <IconLink className="size-4 text-neutral-500 dark:text-neutral-400" />
+          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="p-1 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+            >
+              <IconBrandGithub className="size-4 text-neutral-500 dark:text-neutral-400" />
+            </a>
+          )}
+        </div>
+      </div>
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+        {project.description}
+      </p>
+      <div className="flex flex-wrap gap-1.5 mt-2">
+        {project.tech.map((t, i) => (
+          <span
+            key={i}
+            className="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full text-[11px]"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+const PROJECTS = [
+  {
+    name: "Job Board MVP",
+    description:
+      "Junior-friendly job opportunities from Hacker News, updated daily.",
+    videoUrl:
+      "https://pub-d3c342b4d8e242deb0f60d25f55981ac.r2.dev/videos/demos/jobboardmvp/jobboardmvp-demo.mp4",
+    tech: [
+      "next.js 16",
+      "react 19",
+      "typescript",
+      "tailwind css v4",
+      "node.js",
+      "express 5",
+      "redis",
+      "vercel",
+      "render",
+    ],
+    link: "https://job-board-mvp-f4n8.vercel.app/",
+    github: "https://github.com/kise07/jobboardmvp",
+  },
+];
+
 const TABS = ["Works", "Projects"] as const;
 
 export const Works = ({ className }: { className?: string }) => {
@@ -171,10 +261,12 @@ export const Works = ({ className }: { className?: string }) => {
             </div>
           </div>
 
-          {/* Projects tab — placeholder */}
+          {/* Projects tab */}
           <div className="overflow-y-auto scrollbar-none max-h-[calc(100vh-12rem)]">
-            <div className="flex items-center justify-center min-h-[400px] text-neutral-500 dark:text-neutral-400 text-sm py-2">
-              Coming soon
+            <div className="grid grid-cols-1 gap-4 py-2">
+              {PROJECTS.map((project, index) => (
+                <ProjectCard key={project.name} project={project} index={index} />
+              ))}
             </div>
           </div>
         </TransitionPanel>
