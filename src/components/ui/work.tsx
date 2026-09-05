@@ -114,18 +114,11 @@ const WORKS = [
 
 const ProjectCard = ({
   project,
-  index,
 }: {
   project: (typeof PROJECTS)[number];
-  index: number;
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50, filter: "blur(4px)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.2, ease: "easeInOut", delay: index * 0.1 }}
-      className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2"
-    >
+    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2">
       <div className="overflow-hidden rounded-lg">
         <video
           src={project.videoUrl}
@@ -135,7 +128,7 @@ const ProjectCard = ({
           playsInline
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -214,8 +207,8 @@ export const Works = ({ className }: { className?: string }) => {
           {/* Projects tab */}
           <div className="overflow-y-auto scrollbar-none max-h-[calc(100vh-12rem)]">
             <div className="grid grid-cols-1 gap-4 py-2">
-              {PROJECTS.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
+              {PROJECTS.map((project) => (
+                <ProjectCard key={project.id} project={project} />
               ))}
             </div>
           </div>
