@@ -33,8 +33,8 @@ const WorkCard = ({
   const [key, setKey] = useState(0);
 
   return (
-    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2">
-      <div className="flex items-center justify-center min-h-[500px] overflow-hidden rounded-lg">
+    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2 m-2">
+      <div className="flex items-center justify-center h-full overflow-hidden rounded-lg">
         <Component key={key} />
       </div>
       <div className="flex items-center justify-between mt-3">
@@ -127,6 +127,9 @@ const ProjectCard = ({
           muted
           playsInline
         />
+        <div className="flex items-center justify-between mt-3">
+          {project.name}
+        </div>
       </div>
     </div>
   );
@@ -135,11 +138,13 @@ const ProjectCard = ({
 const PROJECTS = [
   {
     id: 1,
+    name: "Job Board MVP",
     videoUrl:
       "https://pub-d3c342b4d8e242deb0f60d25f55981ac.r2.dev/videos/demos/jobboardmvp/jobboardmvp-demo.mp4",
   },
   {
     id: 2,
+    name: "Link in Bio",
     videoUrl:
       "https://pub-d3c342b4d8e242deb0f60d25f55981ac.r2.dev/videos/demos/linkinbio/linkinbio.mp4",
   },
@@ -197,7 +202,7 @@ export const Works = ({ className }: { className?: string }) => {
         >
           {/* Works tab — scrollable card list */}
           <div className="overflow-y-auto scrollbar-none max-h-[calc(100vh-12rem)]">
-            <div className="grid grid-cols-1 gap-4 py-2">
+            <div className="grid grid-cols-1 auto-rows-[500px] gap-4 py-2">
               {WORKS.map((work) => (
                 <WorkCard key={work.name} {...work} />
               ))}
