@@ -2,6 +2,14 @@
 import { motion } from "motion/react";
 import { cn } from "../../../lib/utils";
 
+export const TestSectionHeading = () => {
+  return (
+    <SectionHeadingStyle delay={0} className="text-neutral-900 dark:text-neutral-100">
+      Section Heading
+    </SectionHeadingStyle>
+  )
+}
+
 export const SectionHeadingStyle = ({
   children,
   delay = 0,

@@ -4,6 +4,12 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { cn } from "../../../../lib/utils";
 
+export const FlipperStyle = () => {
+  return (
+    <Flipper className="text-secondary relative order-first flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 text-sm shadow-sm shadow-black/50 dark:shadow-white/50 ring-1 ring-black/10 dark:ring-white/10 sm:order-last sm:mx-0 sm:mb-0" />
+  )
+}
+
 export default function Flipper({ className }: { className?: string }) {
   const words = [
     "Software Engineer",

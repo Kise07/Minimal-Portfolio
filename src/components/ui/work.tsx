@@ -4,22 +4,8 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "../../../lib/utils";
 import { RefreshIcon } from "../svgs/svgs";
-import { AnimateText } from "../work/animated-text";
-import { AnimationSequences } from "../work/animation-sequences";
-import { AnimateBackground } from "../work/animationSequence/animate-bg";
-import { SubmitButton } from "../work/animationSequence/animate-submit-btn";
-import { HoverExit } from "../work/hover-exit";
-import { CardsGrid } from "../work/layouts/cards-grid-layout";
-import { ExpendedButtons } from "../work/layouts/expanded-btn";
-import { LayoutCards } from "../work/layouts/layout-cards";
-import { MovingAvatar } from "../work/layouts/moving-avatar";
-import { NavSmooth } from "../work/layouts/nav-smooth";
 import { TransitionPanel } from "../work/minimal/transition-panel";
-import { ButtonEffect } from "../work/react-animations/button-effect";
-import { SkewedButton } from "../work/react-animations/skewed-button";
-import { SkewedButtonSecond } from "../work/react-animations/skewed-button-types";
-import { TransitionExploration } from "../work/react-animations/tansition-exploration";
-import { Xanimation } from "../work/x-animation";
+import { AnimateText, AnimationSequences, HeadingStyle, HoverExit, TestSectionHeading, TestSubheading, Xanimation, AnimateBackground, SubmitButton, StackCards, CardsGrid, ExpendedButtons, LayoutCards, NavbarLayout, MovingAvatar, NavSmooth, Dots, HoverWave, InfiniteSliderVertical, MagneticButton, StackedItemsStyle, FlipperStyle, TextLoopBasic, TabsTransitionPanel, ButtonEffect, SkewedButtonSecond, SkewedButton, TransitionExploration } from "../work";
 
 const WorkCard = ({
   name,
@@ -33,11 +19,11 @@ const WorkCard = ({
   const [key, setKey] = useState(0);
 
   return (
-    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2 m-2">
-      <div className="flex items-center justify-center h-full overflow-hidden rounded-lg">
+    <div className="flex flex-col rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2">
+      <div className="flex items-center justify-center flex-1 overflow-hidden rounded-lg">
         <Component key={key} />
       </div>
-      <div className="flex items-center justify-between py-4">
+      <div className="flex items-center justify-between mt-3">
         <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
           {name}
         </h3>
@@ -118,18 +104,19 @@ const ProjectCard = ({
   project: (typeof PROJECTS)[number];
 }) => {
   return (
-    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2">
-      <div className="overflow-hidden rounded-lg">
+    <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 p-2 flex flex-col">
+      <div className="flex-1 flex items-center justify-center overflow-hidden rounded-lg">
         <video
           src={project.videoUrl}
           autoPlay
           loop
           muted
           playsInline
+          className="h-full object-cover"
         />
-        <div className="flex items-center justify-between mt-3">
-          {project.name}
-        </div>
+      </div>
+      <div className="flex items-center justify-between mt-3">
+        <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{project.name}</h3>
       </div>
     </div>
   );
@@ -211,7 +198,7 @@ export const Works = ({ className }: { className?: string }) => {
 
           {/* Projects tab */}
           <div className="overflow-y-auto scrollbar-none max-h-[calc(100vh-12rem)]">
-            <div className="grid grid-cols-1 gap-4 py-2">
+            <div className="grid grid-cols-1 gap-4 py-2 auto-rows-[500px]">
               {PROJECTS.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}

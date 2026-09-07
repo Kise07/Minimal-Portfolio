@@ -3,6 +3,12 @@
 import { LayoutGroup, motion } from "motion/react";
 import { cn } from "../../../../lib/utils";
 
+export const StackedItemsStyle = () => {
+  return (
+    <StackedItems />
+  )
+}
+
 export default function StackedItems() {
   const stack: string[] = ["React", "Next.js", "Tailwind CSS"];
 
