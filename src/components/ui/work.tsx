@@ -37,7 +37,7 @@ const WorkCard = ({
       <div className="flex items-center justify-center h-full overflow-hidden rounded-lg">
         <Component key={key} />
       </div>
-      <div className="flex items-center justify-between mt-3">
+      <div className="flex items-center justify-between py-4">
         <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
           {name}
         </h3>
