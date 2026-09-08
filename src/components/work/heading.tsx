@@ -2,6 +2,12 @@
 import { motion } from "motion/react";
 import { cn } from "../../../lib/utils";
 
+export const TestHeading = () => {
+  return (
+    <HeadingStyle className="text-primary">Heading Text</HeadingStyle>
+  )
+}
+
 export const HeadingStyle = ({
   as: Tag = "h1",
   children,

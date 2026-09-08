@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "../../../lib/utils";
 import { RefreshIcon } from "../svgs/svgs";
+import { AnimateBackground, AnimateText, AnimationSequences, ButtonEffect, CardsGrid, DotPatterns, ExpendedButtons, HoverExit, InfiniteSliderVertical, LayoutCards, MagneticButton, MovingAvatar, NavbarLayout, SkewedButton, SkewedButtonSecond, StackCards, SubmitButton, TestHeading, TestSectionHeading, TestSubheading, TextLoopBasic, TransitionExploration } from "../work";
 import { TransitionPanel } from "../work/minimal/transition-panel";
-import { AnimateText, AnimationSequences, HeadingStyle, HoverExit, TestSectionHeading, TestSubheading, Xanimation, AnimateBackground, SubmitButton, StackCards, CardsGrid, ExpendedButtons, LayoutCards, NavbarLayout, MovingAvatar, NavSmooth, Dots, HoverWave, InfiniteSliderVertical, MagneticButton, StackedItemsStyle, FlipperStyle, TextLoopBasic, TabsTransitionPanel, ButtonEffect, SkewedButtonSecond, SkewedButton, TransitionExploration } from "../work";
 
 const WorkCard = ({
   name,
@@ -49,7 +49,7 @@ const WORKS = [
   {
     name: "Animated Heading",
     category: "Heading Animation",
-    component: HeadingStyle,
+    component: TestHeading,
   },
   {
     name: "Section Heading",
@@ -74,12 +74,7 @@ const WORKS = [
   {
     name: "Dot Patterns",
     category: "Background Effect",
-    component: Dots,
-  },
-  {
-    name: "Hover Wave",
-    category: "Background Effect",
-    component: HoverWave,
+    component: DotPatterns,
   },
   {
     name: "Infinite Slider",
@@ -92,19 +87,9 @@ const WORKS = [
     component: MagneticButton,
   },
   {
-    name: "Stacked Items",
-    category: "Hover Effects",
-    component: StackedItemsStyle,
-  },
-  {
     name: "Text Loop",
     category: "Text Animation",
     component: TextLoopBasic,
-  },
-  {
-    name: "X Logo Spotlight",
-    category: "SVG Interaction",
-    component: Xanimation,
   },
   {
     name: "Animation Sequences",
@@ -138,7 +123,6 @@ const WORKS = [
     component: SkewedButtonSecond,
   },
   { name: "Skewed Button", category: "3D Tilt", component: SkewedButton },
-  { name: "Nav Smooth", category: "Navigation", component: NavSmooth },
   {
     name: "Moving Avatar",
     category: "Position Animation",

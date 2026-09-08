@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const SkewedButtonSecond = () => {
   return (
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="text-sm md:text-xl h-full w-full flex items-center justify-center">
       <div className="py-10 grid grid-cols-2 gap-10 max-w-sm mx-auto">
         <First />
         <Second />

@@ -4,7 +4,7 @@ import { cn } from "../../../lib/utils";
 
 export const TestSectionHeading = () => {
   return (
-    <SectionHeadingStyle delay={0} className="text-neutral-900 dark:text-neutral-100">
+    <SectionHeadingStyle delay={0} className="text-neutral-900 dark:text-neutral-500 p-4">
       Section Heading
     </SectionHeadingStyle>
   )
@@ -69,12 +69,12 @@ const BackgroundStyle = () => {
         ease: "easeInOut",
         delay: 1,
       }}
-      className="absolute inset-0 h-full w-full scale-[1.04] bg-neutral-100"
+      className="absolute inset-0 h-full w-full scale-[1.04] bg-neutral-200 dark:bg-neutral-700"
     >
-      <div className="absolute -top-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-200"></div>
-      <div className="absolute -top-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-200"></div>
-      <div className="absolute -bottom-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-200"></div>
-      <div className="absolute -bottom-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-200"></div>
+      <div className="absolute -top-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
+      <div className="absolute -top-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
+      <div className="absolute -bottom-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
+      <div className="absolute -bottom-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
     </motion.div>
   );
 };

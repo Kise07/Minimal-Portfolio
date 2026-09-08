@@ -13,7 +13,7 @@ export const ExpendedButtons = () => {
       <div className="flex flex-col items-center w-40">
         <button
           onClick={() => setExpanded(!expanded)}
-          className="px-4 py-2 rounded-full bg-blue-500 text-base font-medium text-shadow-md text-white"
+          className="px-4 py-2 rounded-full bg-blue-500 text-base md:text-xl font-medium text-shadow-md text-white"
         >
           <span>{expanded ? "Unsubscribe" : "Subscribe"}</span>
         </button>

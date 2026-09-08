@@ -25,7 +25,7 @@ const First = () => {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
       >
         <img
           alt="first image"
@@ -46,7 +46,7 @@ const Second = () => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
       >
         <img
           alt="second image"
@@ -68,7 +68,7 @@ const Third = () => {
           stiffness: 300,
           damping: 10,
         }}
-        className="size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
       >
         <img
           alt="third image"
@@ -90,7 +90,7 @@ const Fourth = () => {
           visualDuration: 1,
           bounce: 0.3,
         }}
-        className="size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
       >
         <img
           alt="fourth image"

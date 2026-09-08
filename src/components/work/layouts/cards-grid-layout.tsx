@@ -38,7 +38,7 @@ export const CardsGrid = () => {
   });
 
   return (
-    <div className="h-dvh w-full flex items-center justify-center px-4">
+    <div className="h-full w-full flex items-center justify-center px-4">
       <div className="relative max-w-3xl mx-auto w-full">
         <AnimatePresence mode="popLayout">
           {active && (

@@ -35,7 +35,7 @@ export const NavbarLayout = () => {
             key={item.href}
             type="button"
             onClick={() => setIsActive(item.href)}
-            className="relative rounded-full px-4 py-2 text-sm font-medium text-neutral-600 transition-colors duration-200 hover:text-neutral-950"
+            className="relative rounded-full px-4 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-400 transition-colors duration-200 hover:text-neutral-400 hover:dark:text-neutral-100"
           >
             {isActive === item.href ? <span /> : null}
             <span className="relative z-20">{item.title}</span>

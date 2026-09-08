@@ -42,31 +42,31 @@ const dockItems: Array<{
   center: string;
   edge: string;
 }> = [
-  {
-    label: "Safari",
-    Icon: IconBrandSafari,
-    center: "var(--color-blue-300)",
-    edge: "var(--color-blue-700)",
-  },
-  {
-    label: "Files",
-    Icon: IconFolder,
-    center: "var(--color-amber-200)",
-    edge: "var(--color-amber-600)",
-  },
-  {
-    label: "Mail",
-    Icon: IconMail,
-    center: "var(--color-sky-200)",
-    edge: "var(--color-sky-600)",
-  },
-  {
-    label: "Music",
-    Icon: IconMusic,
-    center: "var(--color-rose-300)",
-    edge: "var(--color-rose-700)",
-  },
-];
+    {
+      label: "Safari",
+      Icon: IconBrandSafari,
+      center: "var(--color-blue-300)",
+      edge: "var(--color-blue-700)",
+    },
+    {
+      label: "Files",
+      Icon: IconFolder,
+      center: "var(--color-amber-200)",
+      edge: "var(--color-amber-600)",
+    },
+    {
+      label: "Mail",
+      Icon: IconMail,
+      center: "var(--color-sky-200)",
+      edge: "var(--color-sky-600)",
+    },
+    {
+      label: "Music",
+      Icon: IconMusic,
+      center: "var(--color-rose-300)",
+      edge: "var(--color-rose-700)",
+    },
+  ];
 
 function StackCards({
   peak = 0.5,
@@ -88,7 +88,7 @@ function StackCards({
 
   return (
     <div
-      className="relative flex h-dvh w-full items-end justify-center overflow-hidden bg-cover bg-no-repeat"
+      className="relative flex h-full w-full items-end justify-center overflow-hidden bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${cardImage})` }}
     >
       {!isMinimized ? (

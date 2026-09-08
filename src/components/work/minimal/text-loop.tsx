@@ -11,7 +11,7 @@ import { cn } from "../../../../lib/utils";
 
 export function TextLoopBasic() {
   return (
-    <TextLoop className="font-mono text-sm">
+    <TextLoop className="font-mono text-sm md:text-xl">
       <span>How can I assist you today?</span>
       <span>Generate a logo</span>
       <span>Create a component</span>

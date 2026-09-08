@@ -1,5 +1,12 @@
 import { cn } from "../../../../lib/utils";
 
+export const DotPatterns = () => {
+  return (
+    <Dots className="w-full h-48 rounded-full text-neutral-100 bg-neutral-900 dark:bg-neutral-700">
+      <span className="hover:ring-2 p-2 rounded-full">Dot Patterns</span></Dots>
+  )
+}
+
 export const Dots = ({
   children,
   className,

@@ -1,7 +1,7 @@
 // root component for work section
 export { AnimateText } from "./animated-text";
 export { AnimationSequences } from "./animation-sequences";
-export { HeadingStyle } from "./heading";
+export { TestHeading } from "./heading";
 export { HoverExit } from "./hover-exit";
 export { TestSectionHeading } from "./section-heading";
 export { TestSubheading } from "./subheading";
@@ -23,12 +23,11 @@ export { MovingAvatar } from "./layouts/moving-avatar";
 export { NavSmooth } from "./layouts/nav-smooth";
 
 // minimal components
-export { Dots } from "./minimal/dot-patterns";
-export { HoverWave } from "./minimal/hover-wave";
+export { DotPatterns } from "./minimal/dot-patterns";
+export { HoverWave as HoverWaveStyle } from "./minimal/hover-wave";
 export { InfiniteSliderVertical } from "./minimal/infinite-slider";
 export { MagneticButton } from "./minimal/magnetic-button";
-export { StackedItemsStyle } from "./minimal/stacked-hover-items";
-export { FlipperStyle } from "./minimal/text-flipper";
+export { default as StackedItemsStyle } from "./minimal/stacked-hover-items";
 export { TextLoopBasic } from "./minimal/text-loop";
 export { TabsTransitionPanel } from "./minimal/transition-panel";
 

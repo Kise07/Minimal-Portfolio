@@ -23,7 +23,7 @@ export const MovingAvatar = () => {
   }, []);
 
   return (
-    <div className="relative h-dvh w-full overflow-hidden bg-[url('https://assets.aceternity.com/acelearn/world-map.webp')] bg-cover bg-center bg-no-repeat">
+    <div className="relative h-full w-full overflow-hidden bg-[url('https://assets.aceternity.com/acelearn/world-map.webp')] bg-cover bg-center bg-no-repeat">
       <motion.img
         layoutId="moving-avatar"
         animate={position}

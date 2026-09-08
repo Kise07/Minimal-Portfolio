@@ -6,7 +6,7 @@ import { cn } from "../../../../lib/utils";
 
 export function InfiniteSliderVertical() {
   return (
-    <div className="flex h-[350px] space-x-4">
+    <div className="flex h-full space-x-4">
       <InfiniteSlider direction="vertical">
         <img
           src="https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677"
@@ -151,15 +151,15 @@ export function InfiniteSlider({
 
   const hoverProps = speedOnHover
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setIsHovering(true);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setIsHovering(false);
-        },
-      }
+      onHoverStart: () => {
+        setIsTransitioning(true);
+        setIsHovering(true);
+      },
+      onHoverEnd: () => {
+        setIsTransitioning(true);
+        setIsHovering(false);
+      },
+    }
     : {};
 
   return (

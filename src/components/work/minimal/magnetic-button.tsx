@@ -38,7 +38,7 @@ function MagneticButton() {
   return (
     <div className="flex h-full w-full items-center justify-center">
       <div
-        className="rounded-lg border border-dashed transition-colors duration-500 [--show-color:var(--color-blue-500)] dark:[--show-color:var(--color-blue-600)]"
+        className="rounded-lg border border-dashed transition-colors duration-500 [--show-color:var(--color-neutral-500)] dark:[--show-color:var(--color-neutral-600)]"
         style={{
           borderColor: hasMoved ? "var(--show-color)" : "transparent",
           backgroundColor: hasMoved
@@ -58,8 +58,8 @@ function MagneticButton() {
             mass: 0.1,
           }}
         >
-          <button className="relative rounded-lg bg-linear-to-b from-blue-500 to-blue-700 px-4 py-2 font-medium text-white active:scale-98 transition duration-200">
-            Button
+          <button className="relative rounded-lg bg-linear-to-b from-neutral-500 to-neutral-700 px-4 py-2 font-medium text-white active:scale-98 transition duration-200">
+            Magnetic Button
           </button>
         </motion.div>
       </div>
