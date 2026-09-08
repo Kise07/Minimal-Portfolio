@@ -47,6 +47,61 @@ const WorkCard = ({
 const WORKS = [
   { name: "Animate Text", category: "Text Animation", component: AnimateText },
   {
+    name: "Animated Heading",
+    category: "Heading Animation",
+    component: HeadingStyle,
+  },
+  {
+    name: "Section Heading",
+    category: "Section Animation",
+    component: TestSectionHeading,
+  },
+  {
+    name: "Animated Subheading",
+    category: "Subheading Animation",
+    component: TestSubheading,
+  },
+  {
+    name: "Arc Dock Cards",
+    category: "Drag Animation",
+    component: StackCards,
+  },
+  {
+    name: "Navbar Layout",
+    category: "Navigation",
+    component: NavbarLayout,
+  },
+  {
+    name: "Dot Patterns",
+    category: "Background Effect",
+    component: Dots,
+  },
+  {
+    name: "Hover Wave",
+    category: "Background Effect",
+    component: HoverWave,
+  },
+  {
+    name: "Infinite Slider",
+    category: "Scroll Animation",
+    component: InfiniteSliderVertical,
+  },
+  {
+    name: "Magnetic Button",
+    category: "Cursor Interaction",
+    component: MagneticButton,
+  },
+  {
+    name: "Stacked Items",
+    category: "Hover Effects",
+    component: StackedItemsStyle,
+  },
+  {
+    name: "Text Loop",
+    category: "Text Animation",
+    component: TextLoopBasic,
+  },
+  {
     name: "X Logo Spotlight",
     category: "SVG Interaction",
     component: Xanimation,
