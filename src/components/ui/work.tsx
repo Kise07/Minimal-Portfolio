@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "../../../lib/utils";
 import { RefreshIcon } from "../svgs/svgs";
-import { AnimateBackground, AnimateText, AnimationSequences, ButtonEffect, CardsGrid, DotPatterns, ExpendedButtons, HoverExit, InfiniteSliderVertical, LayoutCards, MagneticButton, MovingAvatar, NavbarLayout, SkewedButton, SkewedButtonSecond, StackCards, SubmitButton, TestHeading, TestSectionHeading, TestSubheading, TextLoopBasic, TransitionExploration } from "../work";
+import { AnimateBackground, AnimateText, CardsGrid, DotPatterns, ExpendedButtons, FirstSkeletonOne, FirstSkeletonTwo, HoverExit, InfiniteSliderVertical, LayoutCards, MagneticButton, MovingAvatar, NavbarLayout, SecondSkeletonOne, SkewedButton, SkewedButtonSecond, StackCards, SubmitButton, TestSectionHeading, TextLoopBasic, TransitionExploration } from "../work";
 import { TransitionPanel } from "../work/minimal/transition-panel";
 
 const WorkCard = ({
@@ -47,19 +47,24 @@ const WorkCard = ({
 const WORKS = [
   { name: "Animate Text", category: "Text Animation", component: AnimateText },
   {
-    name: "Animated Heading",
-    category: "Heading Animation",
-    component: TestHeading,
+    name: "Web UI-1",
+    category: "Cards Designs",
+    component: FirstSkeletonOne,
+  },
+  {
+    name: "Web UI-2",
+    category: "Card Hover Effect",
+    component: FirstSkeletonTwo,
+  },
+  {
+    name: "Web UI-3",
+    category: "Card Hover Effect",
+    component: SecondSkeletonOne,
   },
   {
     name: "Section Heading",
     category: "Section Animation",
     component: TestSectionHeading,
-  },
-  {
-    name: "Animated Subheading",
-    category: "Subheading Animation",
-    component: TestSubheading,
   },
   {
     name: "Arc Dock Cards",
@@ -92,11 +97,6 @@ const WORKS = [
     component: TextLoopBasic,
   },
   {
-    name: "Animation Sequences",
-    category: "Multi-phase",
-    component: AnimationSequences,
-  },
-  {
     name: "Submit Button",
     category: "Button Animation",
     component: SubmitButton,
@@ -107,11 +107,6 @@ const WORKS = [
     component: AnimateBackground,
   },
   { name: "Hover Exit", category: "Card Animation", component: HoverExit },
-  {
-    name: "3D Glow Button",
-    category: "3D Interaction",
-    component: ButtonEffect,
-  },
   {
     name: "Transition Exploration",
     category: "Transition Compare",

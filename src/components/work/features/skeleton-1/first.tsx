@@ -7,7 +7,7 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "../../../../../lib/utils";
 
-export const SkeletonOne = () => {
+export const FirstSkeletonOne = () => {
   return (
     <div className="h-full w-full -translate-y-10 scale-[1.2] rotate-x-30 -rotate-y-20 rotate-z-15">
       <SkeletonCard
@@ -95,9 +95,9 @@ const Badge = ({
         "flex w-fit items-center gap-1 rounded-full border px-1 py-0.5",
         variant === "danger" && "border-red-300 bg-red-300/10 text-red-500",
         variant === "warning" &&
-          "border-yellow-300 bg-yellow-300/10 text-yellow-500",
+        "border-yellow-300 bg-yellow-300/10 text-yellow-500",
         variant === "success" &&
-          "border-green-300 bg-green-300/10 text-green-500",
+        "border-green-300 bg-green-300/10 text-green-500",
       )}
     >
       <IconClock className={cn("size-3")} />

@@ -8,12 +8,11 @@ import {
   SalesforceIcon,
   SheetsIcon,
 } from "@/components/svgs/svgs";
-import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "../../../../../lib/utils";
-import { CardSkeleton } from "../card-skeleton";
 
-export const SkeletonOne = () => {
+export const SecondSkeletonOne = () => {
   type Item = {
     title: string;
     topIcon: React.ReactNode;
@@ -131,11 +130,11 @@ const Card = ({
         duration: 0.3,
         ease: "easeOut",
       }}
-      className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10"
+      className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 overflow-hidden"
     >
       <div
         className={cn(
-          "mt-1 flex size-6 shrink-0 items-center justify-center rounded-full",
+          "mt-1 flex size-2 md:size-6 shrink-0 items-center justify-center rounded-full",
         )}
         style={{
           backgroundColor: bgColor,
@@ -148,7 +147,7 @@ const Card = ({
         <p className="text-sm text-balance text-neutral-600 md:text-base">
           {description}
         </p>
-        <div className="mt-2 flex flex-row flex-wrap gap-2">
+        <div className="mt-2 flex flex-row flex-wrap gap-2 text-sm text-neutral-600">
           {tags.map((tag) => (
             <Tag key={tag.text} text={tag.text} icon={tag.icon} />
           ))}

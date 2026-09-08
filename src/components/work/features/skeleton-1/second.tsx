@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "../../../../../lib/utils";
 
-export const SkeletonTwo = () => {
+export const FirstSkeletonTwo = () => {
   return (
     <div
       style={{
@@ -25,7 +25,7 @@ export const SkeletonTwo = () => {
       </div>
       <div className="relative mt-4 flex-1 rounded-2xl border border-neutral-200 bg-neutral-200">
         <Pattern />
-        <div className="absolute border border-neutral-200 inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 rounded-2xl bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100">
+        <div className="absolute border border-neutral-200 inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 rounded-2xl bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 overflow-hidden">
           <Row
             icon={<IconCheck className="size-3 fill-green-500 stroke-white" />}
             text="Fetching Data"
@@ -80,7 +80,7 @@ const Row = ({
   variant?: "success" | "warning" | "danger";
 }) => {
   return (
-    <div className={cn("flex items-center justify-between px-4 py-2")}>
+    <div className={cn("flex items-center justify-between md:px-4 md:py-2 px-2 sm:py-0.5")}>
       <div className="flex items-center gap-2">
         <div
           className={cn(

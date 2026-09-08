@@ -36,3 +36,11 @@ export { ButtonEffect } from "./react-animations/button-effect";
 export { SkewedButtonSecond } from "./react-animations/skewed-button-types";
 export { SkewedButton } from "./react-animations/skewed-button";
 export { TransitionExploration } from "./react-animations/transition-exploration";
+
+// animated layouts
+// first
+export { FirstSkeletonOne } from "./features/skeleton-1/first";
+export { FirstSkeletonTwo } from "./features/skeleton-1/second";
+
+// second
+export { SecondSkeletonOne } from "./features/skeleton-2/first";
