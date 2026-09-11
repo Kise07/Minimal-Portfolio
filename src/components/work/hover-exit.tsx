@@ -15,6 +15,7 @@ import { AnimatePresence, motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
+const scale = { scale: 0.95 };
 export const HoverExit = () => {
   return (
     <div className="flex items-center justify-center text-black">
@@ -88,6 +89,7 @@ export const Card = () => {
                   scale: 1.05,
                   filter: "blur(0px)",
                 }}
+                whileTap={scale}
                 transition={{
                   type: "spring",
                   stiffness: 100,

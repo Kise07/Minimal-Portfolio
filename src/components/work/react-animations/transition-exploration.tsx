@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 const rotate = { rotateX: 40 };
+const scale = { scale: 0.95 };
 export const TransitionExploration = () => {
   return (
     <div className="h-full w-full items-center justify-center">
@@ -23,6 +24,7 @@ const First = () => {
     <div className="perspective-distant">
       <motion.div
         whileHover={rotate}
+        whileTap={scale}
         transition={{
           duration: 2,
           ease: "easeInOut",
@@ -46,6 +48,7 @@ const Second = () => {
     <div className="perspective-distant">
       <motion.div
         whileHover={rotate}
+        whileTap={scale}
         transition={{
           duration: 0.2,
           ease: "easeInOut",
@@ -69,6 +72,7 @@ const Third = () => {
     <div className="perspective-distant">
       <motion.div
         whileHover={rotate}
+        whileTap={scale}
         transition={{
           type: "spring",
           stiffness: 300,
@@ -93,6 +97,7 @@ const Fourth = () => {
     <div className="perspective-distant">
       <motion.div
         whileHover={rotate}
+        whileTap={scale}
         transition={{
           type: "spring",
           visualDuration: 1,

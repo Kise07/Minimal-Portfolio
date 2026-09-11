@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 
+const scale = { scale: 0.95 };
 export const SkewedButtonSecond = () => {
   return (
     <div className="flex h-full w-full items-center justify-center text-sm md:text-xl">
@@ -20,6 +21,7 @@ const First = () => {
       whileHover={{
         rotate: -10,
       }}
+      whileTap={scale}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Rotate
@@ -33,6 +35,7 @@ const Second = () => {
       whileHover={{
         x: -10,
       }}
+      whileTap={scale}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate
@@ -46,6 +49,7 @@ const Third = () => {
       whileHover={{
         y: -10,
       }}
+      whileTap={scale}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate Y
@@ -62,6 +66,7 @@ const Fourth = () => {
       whileHover={{
         backgroundColor: "var(--color-blue-400)",
       }}
+      whileTap={scale}
       className="relative rounded-full px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Background
