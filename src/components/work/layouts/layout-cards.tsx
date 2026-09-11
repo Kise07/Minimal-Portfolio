@@ -1,6 +1,8 @@
 "use client";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+
+import Link from "next/link";
+
 import { motion } from "motion/react";
 
 // Custom Outside Click Hook --> Very important for closing the modal when clicking outside of it
@@ -29,7 +31,7 @@ export const LayoutCards = () => {
   const ref = useOutsideClick(() => setCurrent(null));
   return (
     // card layout --> click on a card to open the modal with the content of that card
-    <div className="py-10 bg-gray-100 min-h-screen relative">
+    <div className="relative min-h-screen bg-gray-100 py-10">
       {current && (
         <motion.div
           initial={{
@@ -38,28 +40,28 @@ export const LayoutCards = () => {
           animate={{
             opacity: 1,
           }}
-          className="fixed z-10 h-full w-full inset-0 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-10 h-full w-full bg-black/50 backdrop-blur-sm"
         ></motion.div>
       )}
       {current && (
         <motion.div
           layoutId={`card-${current.title}`}
           ref={ref}
-          className="h-[500px] fixed inset-0 z-20 m-auto bg-white w-72 rounded-2xl border border-neutral-200 p-4 overflow-hidden"
+          className="fixed inset-0 z-20 m-auto h-[500px] w-72 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4"
         >
           <motion.img
             layoutId={`card-image-${current.title}`}
             src={current.src}
             alt={current.title}
-            className="w-full aspect-square rounded-2xl"
+            className="aspect-square w-full rounded-2xl"
           />
 
-          <div className="flex flex-col justify-between items-start">
-            <div className="flex items-start justify-between py-4 w-full gap-2">
+          <div className="flex flex-col items-start justify-between">
+            <div className="flex w-full items-start justify-between gap-2 py-4">
               <div className="flex flex-col items-start gap-2">
                 <motion.h2
                   layoutId={`card-title-${current.title}`}
-                  className="font-bold text-xs tracking-tight text-black"
+                  className="text-xs font-bold tracking-tight text-black"
                 >
                   {current.title}
                 </motion.h2>
@@ -73,7 +75,7 @@ export const LayoutCards = () => {
               <motion.div layoutId={`card-cta-${current.title}`}>
                 <Link
                   href={current.ctaLink}
-                  className="px-2 py-1 bg-green-500 rounded-full text-white text-xs"
+                  className="rounded-full bg-green-500 px-2 py-1 text-xs text-white"
                 >
                   {current.ctaText}
                 </Link>
@@ -92,7 +94,7 @@ export const LayoutCards = () => {
               transition={{
                 delay: 0.3,
               }}
-              className="h-50 overflow-auto pb-20 [mask-image:linear-gradient(to_top,transparent_20%,black_80%)]"
+              className="h-50 overflow-auto [mask-image:linear-gradient(to_top,transparent_20%,black_80%)] pb-20"
             >
               {current.content()}
             </motion.div>
@@ -100,25 +102,25 @@ export const LayoutCards = () => {
         </motion.div>
       )}
       {/* main layout --> clicking the rendered items open a card model */}
-      <div className="max-w-lg mx-auto flex flex-col gap-10">
-        {cards.map((card, idx) => (
+      <div className="mx-auto flex max-w-lg flex-col gap-10">
+        {cards.map((card) => (
           <motion.button
             layoutId={`card-${card.title}`}
             onClick={() => setCurrent(card)}
             key={card.title}
-            className="p-4 rounded-lg cursor-pointer flex justify-between items-center bg-white border border-neutral-200"
+            className="flex cursor-pointer items-center justify-between rounded-lg border border-neutral-200 bg-white p-4"
           >
-            <div className="flex gap-4 items-center">
+            <div className="flex items-center gap-4">
               <motion.img
                 layoutId={`card-image-${card.title}`}
                 src={card.src}
                 alt={card.title}
-                className="h-14 aspect-square rounded-lg"
+                className="aspect-square h-14 rounded-lg"
               />
               <div className="flex flex-col items-start gap-2">
                 <motion.h2
                   layoutId={`card-title-${card.title}`}
-                  className="font-bold text-xs tracking-tight text-black"
+                  className="text-xs font-bold tracking-tight text-black"
                 >
                   {card.title}
                 </motion.h2>
@@ -132,7 +134,7 @@ export const LayoutCards = () => {
             </div>
             <motion.div
               layoutId={`card-cta-${card.title}`}
-              className="px-2 py-1 bg-green-500 rounded-full text-white text-xs"
+              className="rounded-full bg-green-500 px-2 py-1 text-xs text-white"
             >
               {card.ctaText}
             </motion.div>
@@ -165,7 +167,7 @@ const cards: Card[] = [
           Elizabeth Woolridge Grant, known professionally as Lana Del Rey, is an
           American singer-songwriter celebrated for her cinematic style and
           melancholic exploration of glamour, depression, and American tragedy.
-          Rising to fame in 2011 with "Video Games," she has crafted a
+          Rising to fame in 2011 with &quot;Video Games,&quot; she has crafted a
           distinctive sonic universe blending baroque pop, dream pop, and
           Americana. Her extensive catalog includes critically acclaimed albums
           like Born to Die, Ultraviolence, and Norman F*ing Rockwell,
@@ -185,14 +187,14 @@ const cards: Card[] = [
       return (
         <p className="text-[10px] text-neutral-500">
           Taylor Alison Swift is a global pop phenomenon who began as
-          Nashville's country darling before conquering every genre she touches.
-          Known for her deeply personal songwriting that turns diary entries
-          into anthems, she has won a record-breaking 14 Grammy Awards and
-          become the highest-grossing female touring artist ever. From Fearless
-          to Midnights, her evolution from country sweetheart to pop superstar
-          to indie-folk experimenter demonstrates an unparalleled ability to
-          reinvent herself while maintaining authentic connection with millions
-          of fans worldwide.
+          Nashville&apos;s country darling before conquering every genre she
+          touches. Known for her deeply personal songwriting that turns diary
+          entries into anthems, she has won a record-breaking 14 Grammy Awards
+          and become the highest-grossing female touring artist ever. From
+          Fearless to Midnights, her evolution from country sweetheart to pop
+          superstar to indie-folk experimenter demonstrates an unparalleled
+          ability to reinvent herself while maintaining authentic connection
+          with millions of fans worldwide.
         </p>
       );
     },
@@ -208,13 +210,13 @@ const cards: Card[] = [
         <p className="text-[10px] text-neutral-500">
           Abel Makkonen Tesfaye, performing as The Weeknd, is a Canadian singer,
           songwriter, and producer whose genre-blending sound has dominated the
-          charts for over a decade. Emerging from Toronto's underground R&B
+          charts for over a decade. Emerging from Toronto&apos;s underground R&B
           scene in 2011, his mysterious persona and dark, atmospheric production
-          style created a new template for modern pop. With hits like "Blinding
-          Lights" becoming the longest-running top 10 hit in Billboard history,
-          he has amassed 7 Diamond-certified singles, multiple Grammy Awards,
-          and a Super Bowl halftime show performance, cementing his status as
-          one of music's biggest global stars.
+          style created a new template for modern pop. With hits like
+          &quot;Blinding Lights&quot; becoming the longest-running top 10 hit in
+          Billboard history, he has amassed 7 Diamond-certified singles,
+          multiple Grammy Awards, and a Super Bowl halftime show performance,
+          cementing his status as one of music&apos;s biggest global stars.
         </p>
       );
     },
@@ -228,15 +230,16 @@ const cards: Card[] = [
     content: () => {
       return (
         <p className="text-[10px] text-neutral-500">
-          Billie Eilish Pirate Baird O'Connell is an American singer-songwriter
-          who dismantled every rule of pop music before turning 20. Raised in
-          Los Angeles by actor parents, she recorded her debut single "Ocean
-          Eyes" in a bedroom with her brother Finneas, launching a career that
-          would earn her 9 Grammy Awards and make her the youngest artist ever
-          to win all four major categories in one night. Her whispery vocals,
-          genre-defying production, and candid exploration of mental health,
-          body image, and climate anxiety have resonated with Generation Z while
-          influencing mainstream music's direction.
+          Billie Eilish Pirate Baird O&apos;Connell is an American
+          singer-songwriter who dismantled every rule of pop music before
+          turning 20. Raised in Los Angeles by actor parents, she recorded her
+          debut single &quot;Ocean Eyes&quot; in a bedroom with her brother
+          Finneas, launching a career that would earn her 9 Grammy Awards and
+          make her the youngest artist ever to win all four major categories in
+          one night. Her whispery vocals, genre-defying production, and candid
+          exploration of mental health, body image, and climate anxiety have
+          resonated with Generation Z while influencing mainstream music&apos;s
+          direction.
         </p>
       );
     },
@@ -255,10 +258,11 @@ const cards: Card[] = [
           him one of the best-selling music artists in history. From busking on
           London streets to selling out stadiums worldwide, his blend of
           acoustic pop, hip-hop influences, and heartfelt storytelling has
-          produced billions of streams and record-breaking singles like "Shape
-          of You." With 12 Brit Awards, 4 Grammy Awards, and an MBE from the
-          British Crown, he continues to shape pop music through his prolific
-          output and collaborations with artists across every genre.
+          produced billions of streams and record-breaking singles like
+          &quot;Shape of You.&quot; With 12 Brit Awards, 4 Grammy Awards, and an
+          MBE from the British Crown, he continues to shape pop music through
+          his prolific output and collaborations with artists across every
+          genre.
         </p>
       );
     },

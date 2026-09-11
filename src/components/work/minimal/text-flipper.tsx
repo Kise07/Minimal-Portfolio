@@ -1,14 +1,16 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { cn } from "../../../../lib/utils";
+
+import { AnimatePresence, motion } from "motion/react";
+
+import { cn } from "@/lib/utils";
 
 export const FlipperStyle = () => {
   return (
-    <Flipper className="text-secondary relative order-first flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 text-sm shadow-sm shadow-black/50 dark:shadow-white/50 ring-1 ring-black/10 dark:ring-white/10 sm:order-last sm:mx-0 sm:mb-0" />
-  )
-}
+    <Flipper className="text-secondary relative order-first flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 text-sm shadow-sm ring-1 shadow-black/50 ring-black/10 sm:order-last sm:mx-0 sm:mb-0 dark:shadow-white/50 dark:ring-white/10" />
+  );
+};
 
 export default function Flipper({ className }: { className?: string }) {
   const words = [
@@ -30,12 +32,12 @@ export default function Flipper({ className }: { className?: string }) {
   }, [words.length]);
 
   return (
-    <div className={cn("flex items-center justify-center h-full", className)}>
+    <div className={cn("flex h-full items-center justify-center", className)}>
       <motion.div
         layout
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-secondary relative order-first flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 text-sm shadow-sm shadow-black/50 dark:shadow-white/50 ring-1 ring-black/10 dark:ring-white/10 sm:order-last sm:mx-0 sm:mb-0"
+        className="text-secondary relative order-first flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 text-sm shadow-sm ring-1 shadow-black/50 ring-black/10 sm:order-last sm:mx-0 sm:mb-0 dark:shadow-white/50 dark:ring-white/10"
       >
         <AnimatePresence mode="popLayout">
           <motion.span

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { cn } from "../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export const Heading = ({
   as: Tag = "h1",
@@ -22,7 +23,7 @@ export const Heading = ({
       <Tag
         className={cn(
           "text-lg font-bold tracking-tighter drop-shadow-lg md:text-xl",
-          className,
+          className
         )}
       >
         {children}

@@ -1,4 +1,7 @@
-import { cn } from "../../../lib/utils";
+import Image from "next/image";
+
+import { cn } from "@/lib/utils";
+
 import { Heading } from "../core/heading";
 import { UsersLinks } from "../work/minimal/links";
 import Flipper from "../work/minimal/text-flipper";
@@ -10,12 +13,12 @@ export const Profile = ({ className }: { className?: string }) => {
     <section
       className={cn(
         "m-6 flex flex-col items-baseline justify-start gap-4",
-        className,
+        className
       )}
     >
-      <div className="flex items-start justify-between w-full">
+      <div className="flex w-full items-start justify-between">
         <div className="flex flex-col items-center gap-4">
-          <img src="/ava.png" alt="avatar" className="size-30" />
+          <Image src="/ava.png" alt="avatar" width={30} height={30} />
           <span>
             Connect with me <UsersLinks />
           </span>

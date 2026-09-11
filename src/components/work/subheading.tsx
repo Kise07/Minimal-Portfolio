@@ -1,12 +1,15 @@
 "use client";
 import { motion } from "motion/react";
-import { cn } from "../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export const TestSubheading = () => {
   return (
-    <SubheadingStyle className="text-neutral-700 dark:text-neutral-300">Subheading Text</SubheadingStyle>
-  )
-}
+    <SubheadingStyle className="text-neutral-700 dark:text-neutral-300">
+      Subheading Text
+    </SubheadingStyle>
+  );
+};
 
 export const SubheadingStyle = ({
   as: Tag = "h2",
@@ -40,7 +43,7 @@ export const SubheadingStyle = ({
       <Tag
         className={cn(
           "text-secondary max-w-lg px-4 pt-4 text-sm md:text-sm",
-          className,
+          className
         )}
       >
         {children}

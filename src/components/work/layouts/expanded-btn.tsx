@@ -1,7 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+
+import { AnimatePresence, motion } from "motion/react";
 
 export const ExpendedButtons = () => {
   const [expanded, setExpanded] = useState(false);
@@ -9,21 +10,21 @@ export const ExpendedButtons = () => {
   const [expandedSecond, setExpandedSecond] = useState(false);
 
   return (
-    <div className="flex items-center flex-col sm:flex-row justify-center py-10 gap-20 h-full">
-      <div className="flex flex-col items-center w-40">
+    <div className="flex h-full flex-col items-center justify-center gap-20 py-10 sm:flex-row">
+      <div className="flex w-40 flex-col items-center">
         <button
           onClick={() => setExpanded(!expanded)}
-          className="px-4 py-2 rounded-full bg-blue-500 text-base md:text-xl font-medium text-shadow-md text-white"
+          className="rounded-full bg-blue-500 px-4 py-2 text-base font-medium text-white text-shadow-md md:text-xl"
         >
           <span>{expanded ? "Unsubscribe" : "Subscribe"}</span>
         </button>
-        <span className="text-neutral-500 text-sm mt-2">w/0 layout</span>
+        <span className="mt-2 text-sm text-neutral-500">w/0 layout</span>
       </div>
-      <div className="flex flex-col items-center w-40">
+      <div className="flex w-40 flex-col items-center">
         <motion.button
           layout
           onClick={() => setExpandedSecond(!expandedSecond)}
-          className="px-4 py-2 rounded-full relative overflow-hidden bg-blue-500 text-base font-medium text-shadow-md text-white"
+          className="relative overflow-hidden rounded-full bg-blue-500 px-4 py-2 text-base font-medium text-white text-shadow-md"
         >
           <AnimatePresence mode="popLayout">
             <motion.span
@@ -37,7 +38,7 @@ export const ExpendedButtons = () => {
             </motion.span>
           </AnimatePresence>
         </motion.button>
-        <span className="text-neutral-500 text-sm mt-2">with layout</span>
+        <span className="mt-2 text-sm text-neutral-500">with layout</span>
       </div>
     </div>
   );

@@ -4,7 +4,8 @@ import {
   IconLoader2,
   IconRipple,
 } from "@tabler/icons-react";
-import { cn } from "../../../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export const FirstSkeletonTwo = () => {
   return (
@@ -14,7 +15,7 @@ export const FirstSkeletonTwo = () => {
       }}
       className={cn(
         "group mx-auto my-auto flex h-65 w-full max-w-[55%] flex-col rounded-2xl border border-neutral-300 bg-neutral-100 p-3 shadow-2xl dark:border-neutral-700",
-        "[--pattern-fg:var(--color-neutral-950)]/5 dark:[--pattern-fg:var(--color-white)]/10",
+        "[--pattern-fg:var(--color-neutral-950)]/5 dark:[--pattern-fg:var(--color-white)]/10"
       )}
     >
       <div className="flex items-center gap-3 text-base">
@@ -25,7 +26,7 @@ export const FirstSkeletonTwo = () => {
       </div>
       <div className="relative mt-4 flex-1 rounded-2xl border border-neutral-200 bg-neutral-200">
         <Pattern />
-        <div className="absolute border border-neutral-200 inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 rounded-2xl bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 overflow-hidden">
+        <div className="absolute inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100">
           <Row
             icon={<IconCheck className="size-3 fill-green-500 stroke-white" />}
             text="Fetching Data"
@@ -80,14 +81,18 @@ const Row = ({
   variant?: "success" | "warning" | "danger";
 }) => {
   return (
-    <div className={cn("flex items-center justify-between md:px-4 md:py-2 px-2 sm:py-0.5")}>
+    <div
+      className={cn(
+        "flex items-center justify-between px-2 sm:py-0.5 md:px-4 md:py-2"
+      )}
+    >
       <div className="flex items-center gap-2">
         <div
           className={cn(
             "flex size-4 items-center justify-center rounded-full",
             variant === "success" && "bg-green-500",
             variant === "warning" && "bg-yellow-500",
-            variant === "danger" && "bg-red-500",
+            variant === "danger" && "bg-red-500"
           )}
         >
           {icon}

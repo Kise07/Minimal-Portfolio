@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "motion/react";
 
 const rotate = { rotateX: 40 };
 export const TransitionExploration = () => {
   return (
     <div className="h-full w-full items-center justify-center">
-      <div className="py-10 grid grid-cols-2 gap-10 max-w-sm mx-auto">
+      <div className="mx-auto grid max-w-sm grid-cols-2 gap-10 py-10">
         <First />
         <Second />
         <Third />
@@ -25,12 +27,14 @@ const First = () => {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="rounded-md p-1 shadow-sm ring-1 shadow-black/10 ring-black/10 perspective-origin-center md:size-40"
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           alt="first image"
           src="https://plus.unsplash.com/premium_photo-1732757787074-0f95bf19cf73?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="size-full object-cover rounded-md"
+          className="size-full rounded-md object-cover"
         />
       </motion.div>
     </div>
@@ -46,12 +50,14 @@ const Second = () => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="rounded-md p-1 shadow-sm ring-1 shadow-black/10 ring-black/10 perspective-origin-center md:size-40"
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           alt="second image"
           src="https://plus.unsplash.com/premium_photo-1732757787588-29df717691f4?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="size-full object-cover rounded-md"
+          className="size-full rounded-md object-cover"
         />
       </motion.div>
     </div>
@@ -68,12 +74,14 @@ const Third = () => {
           stiffness: 300,
           damping: 10,
         }}
-        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="rounded-md p-1 shadow-sm ring-1 shadow-black/10 ring-black/10 perspective-origin-center md:size-40"
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           alt="third image"
           src="https://plus.unsplash.com/premium_photo-1732757787045-d903f2e88b08?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="size-full object-cover rounded-md"
+          className="size-full rounded-md object-cover"
         />
       </motion.div>
     </div>
@@ -90,12 +98,14 @@ const Fourth = () => {
           visualDuration: 1,
           bounce: 0.3,
         }}
-        className="md:size-40 rounded-md shadow-sm shadow-black/10 ring-1 ring-black/10 p-1 perspective-origin-center"
+        className="rounded-md p-1 shadow-sm ring-1 shadow-black/10 ring-black/10 perspective-origin-center md:size-40"
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           alt="fourth image"
           src="https://plus.unsplash.com/premium_photo-1732757787074-0f95bf19cf73?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="size-full object-cover rounded-md"
+          className="size-full rounded-md object-cover"
         />
       </motion.div>
     </div>

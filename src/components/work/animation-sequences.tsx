@@ -1,5 +1,5 @@
 "use client";
-import { useAnimate, motion, AnimationSequence } from "motion/react";
+import { AnimationSequence, motion, useAnimate } from "motion/react";
 
 export const AnimationSequences = () => {
   const [scope, animate] = useAnimate();
@@ -39,14 +39,14 @@ export const AnimationSequences = () => {
   return (
     <div
       ref={scope}
-      className="relative w-[30rem] h-20 flex items-center justify-center"
+      className="relative flex h-20 w-[30rem] items-center justify-center"
     >
       <motion.button
         onClick={startAnimating}
         style={{
           width: "30rem",
         }}
-        className="h-20 rounded-lg flex items-center justify-center bg-gradient-to-r from-purple-500 via-voilet-600 to-indigo-500 text-white font-medium cursor-pointer"
+        className="via-voilet-600 flex h-20 cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 font-medium text-white"
       >
         {/* loader svg */}
         <motion.svg
@@ -75,7 +75,7 @@ export const AnimationSequences = () => {
         viewBox="0 0 24 24"
         stroke="#FFFFFF"
         strokeWidth={3}
-        className="check-icon h-8 w-8 absolute inset-0 m-auto z-50 pointer-events-none"
+        className="check-icon pointer-events-none absolute inset-0 z-50 m-auto h-8 w-8"
         style={{
           opacity: 0,
         }}

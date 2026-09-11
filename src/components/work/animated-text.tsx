@@ -1,6 +1,7 @@
 "use client";
-import { motion, stagger, useAnimate } from "motion/react";
 import { useEffect } from "react";
+
+import { motion, stagger, useAnimate } from "motion/react";
 
 export const AnimateText = () => {
   const [scope, animate] = useAnimate();
@@ -8,10 +9,6 @@ export const AnimateText = () => {
     "Welcome to F*** C***. The first rule of F*** C*** is that you don't talk about F*** C***. The second rule of F*** C*** is that you don't talk about F*** C***.";
 
   useEffect(() => {
-    startAnimating();
-  }, []);
-
-  const startAnimating = () => {
     animate(
       "span",
       {
@@ -23,14 +20,14 @@ export const AnimateText = () => {
         duration: 0.5,
         ease: "easeInOut",
         delay: stagger(0.02),
-      },
+      }
     );
-  };
+  }, [animate]);
 
   return (
     <div
       ref={scope}
-      className="max-w-4xl mx-auto font-bold text-4xl text-neutral-700 dark:text-neutral-400"
+      className="mx-auto max-w-4xl text-4xl font-bold text-neutral-700 dark:text-neutral-400"
     >
       {text.split(" ").map((word, index) => (
         <motion.span

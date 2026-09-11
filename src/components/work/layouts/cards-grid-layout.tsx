@@ -1,7 +1,10 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
+
+import Image from "next/image";
+
+import { AnimatePresence, motion } from "motion/react";
 
 export const CardsGrid = () => {
   const avatars = [
@@ -38,22 +41,24 @@ export const CardsGrid = () => {
   });
 
   return (
-    <div className="h-full w-full flex items-center justify-center px-4">
-      <div className="relative max-w-3xl mx-auto w-full">
+    <div className="flex h-full w-full items-center justify-center px-4">
+      <div className="relative mx-auto w-full max-w-3xl">
         <AnimatePresence mode="popLayout">
           {active && (
             <motion.div
               ref={activeCardRef}
               key={active?.src}
               layoutId={`container-${active?.src}`}
-              className="absolute inset-0 bg-neutral-50 size-72 mx-auto -top-20 rounded-2xl shadow-sm shadow-black/10 ring-1 ring-black/10 overflow-hidden flex flex-col items-start"
+              className="absolute inset-0 -top-20 mx-auto flex size-72 flex-col items-start overflow-hidden rounded-2xl bg-neutral-50 shadow-sm ring-1 shadow-black/10 ring-black/10"
               style={{ zIndex: 100 }}
             >
               <motion.div
                 layoutId={`image-${active?.src}`}
-                className="h-3/4 w-full object-cover rounded-b-xl overflow-hidden"
+                className="h-3/4 w-full overflow-hidden rounded-b-xl object-cover"
               >
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={active.src}
                   alt={active.title}
                   className="h-full w-full object-cover"
@@ -75,23 +80,25 @@ export const CardsGrid = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {avatars.map((item) => (
             <motion.button
               layoutId={`container-${item.src}`}
               key={item.src}
               onClick={() => setActive(item)}
               type="button"
-              className="w-full aspect-square rounded-xl object-cover overflow-hidden shadow-sm shadow-black/10 ring-1 ring-black/10"
+              className="aspect-square w-full overflow-hidden rounded-xl object-cover shadow-sm ring-1 shadow-black/10 ring-black/10"
               style={{
                 zIndex: isActive(item) ? 90 : 1,
               }}
             >
               <motion.div
                 layoutId={`image-${item.src}`}
-                className="h-full w-full object-cover rounded-xl"
+                className="h-full w-full rounded-xl object-cover"
               >
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={item.src}
                   alt={item.title}
                   className="h-full w-full object-cover"

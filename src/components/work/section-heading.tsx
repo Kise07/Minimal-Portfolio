@@ -1,14 +1,18 @@
 "use client";
 import { motion } from "motion/react";
-import { cn } from "../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export const TestSectionHeading = () => {
   return (
-    <SectionHeadingStyle delay={0} className="text-neutral-900 dark:text-neutral-500 p-4">
+    <SectionHeadingStyle
+      delay={0}
+      className="p-4 text-neutral-900 dark:text-neutral-500"
+    >
       Section Heading
     </SectionHeadingStyle>
-  )
-}
+  );
+};
 
 export const SectionHeadingStyle = ({
   children,
@@ -23,7 +27,7 @@ export const SectionHeadingStyle = ({
     <h2
       className={cn(
         "relative mt-4 w-fit max-w-lg text-sm font-normal md:text-sm",
-        className,
+        className
       )}
     >
       <BackgroundStyle />
@@ -74,7 +78,7 @@ const BackgroundStyle = () => {
       <div className="absolute -top-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
       <div className="absolute -top-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
       <div className="absolute -bottom-px -left-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
-      <div className="absolute -bottom-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
+      <div className="absolute -right-px -bottom-px h-1 w-1 animate-pulse rounded-full bg-neutral-500"></div>
     </motion.div>
   );
 };

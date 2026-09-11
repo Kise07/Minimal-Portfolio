@@ -1,13 +1,15 @@
 "use client";
+import { Children, useEffect, useState } from "react";
+
 import {
-  motion,
   AnimatePresence,
+  AnimatePresenceProps,
+  motion,
   Transition,
   Variants,
-  AnimatePresenceProps,
 } from "motion/react";
-import { useState, useEffect, Children } from "react";
-import { cn } from "../../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export function TextLoopBasic() {
   return (

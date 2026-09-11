@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
 } from "@tabler/icons-react";
-import Link from "next/link";
+
 import { Dots } from "./dot-patterns";
 
 export const UsersLinks = () => {

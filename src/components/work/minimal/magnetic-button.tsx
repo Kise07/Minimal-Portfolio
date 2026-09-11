@@ -1,7 +1,8 @@
 "use client";
 
+import { type MouseEvent, useRef, useState } from "react";
+
 import { motion } from "motion/react";
-import { useRef, useState, type MouseEvent } from "react";
 
 const STRENGTH = 1;
 const MAX_DISTANCE = 200;
@@ -58,7 +59,7 @@ function MagneticButton() {
             mass: 0.1,
           }}
         >
-          <button className="relative rounded-lg bg-linear-to-b from-neutral-500 to-neutral-700 px-4 py-2 font-medium text-white active:scale-98 transition duration-200">
+          <button className="relative rounded-lg bg-linear-to-b from-neutral-500 to-neutral-700 px-4 py-2 font-medium text-white transition duration-200 active:scale-98">
             Magnetic Button
           </button>
         </motion.div>

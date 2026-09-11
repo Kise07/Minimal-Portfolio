@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 
 export const SkewedButtonSecond = () => {
   return (
-    <div className="text-sm md:text-xl h-full w-full flex items-center justify-center">
-      <div className="py-10 grid grid-cols-2 gap-10 max-w-sm mx-auto">
+    <div className="flex h-full w-full items-center justify-center text-sm md:text-xl">
+      <div className="mx-auto grid max-w-sm grid-cols-2 gap-10 py-10">
         <First />
         <Second />
         <Third />
@@ -20,7 +20,7 @@ const First = () => {
       whileHover={{
         rotate: -10,
       }}
-      className="px-8 shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] py-4 rounded-full bg-linear-to-b from-blue-600 to-blue-500 text-white text-shadow-md relative"
+      className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Rotate
     </motion.button>
@@ -33,7 +33,7 @@ const Second = () => {
       whileHover={{
         x: -10,
       }}
-      className="px-8 shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] py-4 rounded-full bg-linear-to-b from-blue-600 to-blue-500 text-white text-shadow-md relative"
+      className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate
     </motion.button>
@@ -46,7 +46,7 @@ const Third = () => {
       whileHover={{
         y: -10,
       }}
-      className="px-8 shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] py-4 rounded-full bg-linear-to-b from-blue-600 to-blue-500 text-white text-shadow-md relative"
+      className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate Y
     </motion.button>
@@ -62,7 +62,7 @@ const Fourth = () => {
       whileHover={{
         backgroundColor: "var(--color-blue-400)",
       }}
-      className="px-8 shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] py-4 rounded-full text-white text-shadow-md relative"
+      className="relative rounded-full px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Background
     </motion.button>

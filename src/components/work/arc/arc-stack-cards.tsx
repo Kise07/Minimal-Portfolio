@@ -1,15 +1,18 @@
 "use client";
+import { useMemo, useState } from "react";
+import type { CSSProperties } from "react";
+
+import Image from "next/image";
+
 import {
+  type Icon,
   IconBrandSafari,
   IconFolder,
   IconMail,
   IconMusic,
   IconX,
-  type Icon,
 } from "@tabler/icons-react";
 import { arc, motion } from "motion/react";
-import { useMemo, useState } from "react";
-import type { CSSProperties } from "react";
 
 const cardImage =
   "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -42,31 +45,31 @@ const dockItems: Array<{
   center: string;
   edge: string;
 }> = [
-    {
-      label: "Safari",
-      Icon: IconBrandSafari,
-      center: "var(--color-blue-300)",
-      edge: "var(--color-blue-700)",
-    },
-    {
-      label: "Files",
-      Icon: IconFolder,
-      center: "var(--color-amber-200)",
-      edge: "var(--color-amber-600)",
-    },
-    {
-      label: "Mail",
-      Icon: IconMail,
-      center: "var(--color-sky-200)",
-      edge: "var(--color-sky-600)",
-    },
-    {
-      label: "Music",
-      Icon: IconMusic,
-      center: "var(--color-rose-300)",
-      edge: "var(--color-rose-700)",
-    },
-  ];
+  {
+    label: "Safari",
+    Icon: IconBrandSafari,
+    center: "var(--color-blue-300)",
+    edge: "var(--color-blue-700)",
+  },
+  {
+    label: "Files",
+    Icon: IconFolder,
+    center: "var(--color-amber-200)",
+    edge: "var(--color-amber-600)",
+  },
+  {
+    label: "Mail",
+    Icon: IconMail,
+    center: "var(--color-sky-200)",
+    edge: "var(--color-sky-600)",
+  },
+  {
+    label: "Music",
+    Icon: IconMusic,
+    center: "var(--color-rose-300)",
+    edge: "var(--color-rose-700)",
+  },
+];
 
 function StackCards({
   peak = 0.5,
@@ -83,7 +86,7 @@ function StackCards({
         rotate,
         strength,
       }),
-    [direction, peak, rotate, strength],
+    [direction, peak, rotate, strength]
   );
 
   return (
@@ -97,7 +100,7 @@ function StackCards({
             layoutId="card-image-container"
             drag
             dragMomentum={false}
-            className="pointer-events-auto z-20 flex w-72 max-w-[calc(100%-2rem)] cursor-grab flex-col overflow-hidden rounded-2xl bg-white p-1 shadow-sm shadow-black/10 ring-1 ring-black/10 active:cursor-grabbing"
+            className="pointer-events-auto z-20 flex w-72 max-w-[calc(100%-2rem)] cursor-grab flex-col overflow-hidden rounded-2xl bg-white p-1 shadow-sm ring-1 shadow-black/10 ring-black/10 active:cursor-grabbing"
             transition={{
               path: arcPath,
             }}
@@ -108,7 +111,7 @@ function StackCards({
               </span>
               <button
                 aria-label="Minimize image to dock"
-                className="relative flex size-8 items-center justify-center rounded-lg text-neutral-600 active:scale-[0.98] hover:bg-neutral-100 hover:text-neutral-950"
+                className="relative flex size-8 items-center justify-center rounded-lg text-neutral-600 hover:bg-neutral-100 hover:text-neutral-950 active:scale-[0.98]"
                 onClick={() => setIsMinimized(true)}
                 type="button"
               >
@@ -116,7 +119,9 @@ function StackCards({
               </button>
             </div>
             <div className="aspect-video overflow-hidden rounded-xl bg-white shadow-sm ring-1 shadow-black/10 ring-black/10">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt=""
                 className="h-full w-full object-cover"
                 draggable={false}
@@ -137,7 +142,7 @@ function StackCards({
         {dockItems.map(({ label, Icon, center, edge }) => (
           <motion.button
             aria-label={label}
-            className="flex size-12 shrink-0 cursor-not-allowed items-center justify-center rounded-xl text-white  transition duration-200 "
+            className="flex size-12 shrink-0 cursor-not-allowed items-center justify-center rounded-xl text-white transition duration-200"
             key={label}
             style={
               {
@@ -208,7 +213,9 @@ function StackCards({
                 path: arcPath,
               }}
             >
-              <img
+              <Image
+                width={20}
+                height={20}
                 alt=""
                 className="h-full w-full rounded-lg object-cover"
                 draggable={false}

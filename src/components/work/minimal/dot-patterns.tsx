@@ -1,11 +1,12 @@
-import { cn } from "../../../../lib/utils";
+import { cn } from "@/lib/utils";
 
 export const DotPatterns = () => {
   return (
-    <Dots className="w-full h-48 rounded-full text-neutral-100 bg-neutral-900 dark:bg-neutral-700">
-      <span className="hover:ring-2 p-2 rounded-full">Dot Patterns</span></Dots>
-  )
-}
+    <Dots className="h-48 w-full rounded-full bg-neutral-900 text-neutral-100 dark:bg-neutral-700">
+      <span className="rounded-full p-2 hover:ring-2">Dot Patterns</span>
+    </Dots>
+  );
+};
 
 export const Dots = ({
   children,
@@ -17,12 +18,12 @@ export const Dots = ({
   return (
     <div
       className={cn(
-        "dark:bg-neutral-900 rounded-xl flex items-center justify-center",
-        className,
+        "flex items-center justify-center rounded-xl dark:bg-neutral-900",
+        className
       )}
       style={{
         backgroundImage: `radial-gradient(circle at 0.9px 0.9px, rgba(115,115,115) 0.5px, transparent 0)`,
-        backgroundSize: "8px 8px",
+        backgroundSize: "5px 5px",
         backgroundRepeat: "repeat",
       }}
     >

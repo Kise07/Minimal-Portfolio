@@ -1,12 +1,11 @@
 "use client";
 import { motion } from "motion/react";
-import { cn } from "../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export const TestHeading = () => {
-  return (
-    <HeadingStyle className="text-primary">Heading Text</HeadingStyle>
-  )
-}
+  return <HeadingStyle className="text-primary">Heading Text</HeadingStyle>;
+};
 
 export const HeadingStyle = ({
   as: Tag = "h1",
@@ -40,7 +39,7 @@ export const HeadingStyle = ({
       <Tag
         className={cn(
           "text-primary px-4 text-2xl font-bold tracking-tighter drop-shadow-lg md:text-4xl",
-          className,
+          className
         )}
       >
         {children}

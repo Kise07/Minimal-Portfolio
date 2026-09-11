@@ -1,5 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
+import { motion, useInView } from "motion/react";
+
 import {
   CogIcon,
   ErrorIcon,
@@ -8,62 +12,60 @@ import {
   SalesforceIcon,
   SheetsIcon,
 } from "@/components/svgs/svgs";
-import { motion, useInView } from "motion/react";
-import { useEffect, useRef, useState } from "react";
-import { cn } from "../../../../../lib/utils";
+import { cn } from "@/lib/utils";
+
+type Item = {
+  title: string;
+  topIcon: React.ReactNode;
+  description: string;
+  tags: { text: string; icon: React.ReactNode }[];
+};
+
+const items: Item[] = [
+  {
+    title: "Connect Data",
+    topIcon: <FileIcon className="size-4" />,
+    description:
+      "Link CRMs, helpdesks, and API to give agents secure, rule-based access.",
+    tags: [
+      { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
+      { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
+      { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
+    ],
+  },
+  {
+    title: "Define Processing Logic",
+    topIcon: <CogIcon className="size-4" />,
+    description:
+      "Create workflows, decision points, and conditional actions for each task.",
+    tags: [
+      { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
+      { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
+      { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
+    ],
+  },
+  {
+    title: "Human-in-the-Loop",
+    topIcon: <ErrorIcon className="size-4" />,
+    description: "Add reviews, approvals and escalations without slowing work.",
+    tags: [
+      { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
+      { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
+      { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
+    ],
+  },
+];
 
 export const SecondSkeletonOne = () => {
-  type Item = {
-    title: string;
-    topIcon: React.ReactNode;
-    description: string;
-    tags: { text: string; icon: React.ReactNode }[];
-  };
-
   // auto scroll to the bottom of the container when a new card is added
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
-  const items = [
-    {
-      title: "Connect Data",
-      topIcon: <FileIcon className="size-4" />,
-      description:
-        "Link CRMs, helpdesks, and API to give agents secure, rule-based access.",
-      tags: [
-        { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
-        { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
-        { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
-      ],
-    },
-    {
-      title: "Define Processing Logic",
-      topIcon: <CogIcon className="size-4" />,
-      description:
-        "Create workflows, decision points, and conditional actions for each task.",
-      tags: [
-        { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
-        { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
-        { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
-      ],
-    },
-    {
-      title: "Human-in-the-Loop",
-      topIcon: <ErrorIcon className="size-4" />,
-      description:
-        "Add reviews, approvals and escalations without slowing work.",
-      tags: [
-        { text: "Salesforce", icon: <SalesforceIcon className="size-3" /> },
-        { text: "Hubsspot", icon: <HubspotIcon className="size-3" /> },
-        { text: "Google Sheets", icon: <SheetsIcon className="size-3" /> },
-      ],
-    },
-  ];
-
   // React Logic to show one card at a time, then add the next card every second until all cards are shown
   const [actveCard, setActiveCard] = useState<Item[] | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const animate = () => {
+  useEffect(() => {
+    if (!isInView) return;
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setActiveCard((prev) => {
@@ -77,12 +79,6 @@ export const SecondSkeletonOne = () => {
         return [items[prev.length], ...prev];
       });
     }, 1000);
-  };
-
-  useEffect(() => {
-    if (isInView) {
-      animate();
-    }
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
@@ -116,10 +112,10 @@ const Card = ({
     "var(--color-green-500)",
     "var(--color-red-500)",
   ];
-  const [bgColor, setBgColor] = useState(randomColors[0]);
-  useEffect(() => {
-    setBgColor(randomColors[Math.floor(Math.random() * randomColors.length)]);
-  }, []);
+
+  const [bgColor] = useState(
+    () => randomColors[Math.floor(Math.random() * randomColors.length)]
+  );
 
   return (
     <motion.div
@@ -130,11 +126,11 @@ const Card = ({
         duration: 0.3,
         ease: "easeOut",
       }}
-      className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 overflow-hidden"
+      className="flex items-start gap-4 overflow-hidden rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10"
     >
       <div
         className={cn(
-          "mt-1 flex size-2 md:size-6 shrink-0 items-center justify-center rounded-full",
+          "mt-1 flex size-2 shrink-0 items-center justify-center rounded-full md:size-6"
         )}
         style={{
           backgroundColor: bgColor,

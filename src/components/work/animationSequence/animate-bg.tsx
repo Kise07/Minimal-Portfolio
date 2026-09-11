@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { type CSSProperties, useState } from "react";
+
 import { motion, useAnimate } from "motion/react";
 
 export const AnimateBackground = () => {
@@ -31,9 +32,9 @@ export const AnimateBackground = () => {
   };
 
   return (
-    <div ref={scope} className="h-dvh w-full flex items-center justify-center">
+    <div ref={scope} className="flex h-dvh w-full items-center justify-center">
       <div
-        className="button-block w-full h-full flex items-center justify-center"
+        className="button-block flex h-full w-full items-center justify-center"
         style={
           {
             "--gradient-center": "var(--color-neutral-100)",
@@ -45,7 +46,7 @@ export const AnimateBackground = () => {
       >
         <motion.button
           onClick={handleClick}
-          className="bg-black text-white text-shadow-md px-8 py-2 rounded-full active:scale-98 transition duration-200"
+          className="rounded-full bg-black px-8 py-2 text-white transition duration-200 text-shadow-md active:scale-98"
         >
           Animate
         </motion.button>

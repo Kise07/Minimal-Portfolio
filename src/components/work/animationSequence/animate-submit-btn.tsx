@@ -1,6 +1,6 @@
 "use client";
 
-import { useAnimate, type AnimationSequence } from "motion/react";
+import { type AnimationSequence, useAnimate } from "motion/react";
 
 export const SubmitButton = () => {
   const [scope, animate] = useAnimate();
@@ -33,16 +33,16 @@ export const SubmitButton = () => {
   };
 
   return (
-    <div ref={scope} className="flex items-center justify-center h-dvh w-full">
+    <div ref={scope} className="flex h-dvh w-full items-center justify-center">
       <button
         onClick={handleSubmit}
         style={{ width: "8rem" }}
-        className="px-4 w-32 py-2 h-10 relative rounded-full flex items-center justify-center overflow-hidden bg-blue-500"
+        className="relative flex h-10 w-32 items-center justify-center overflow-hidden rounded-full bg-blue-500 px-4 py-2"
       >
-        <span className="first absolute h-full w-full m-auto inset-0 opacity-100 text-shadow-md font-medium text-white flex items-center justify-center">
+        <span className="first absolute inset-0 m-auto flex h-full w-full items-center justify-center font-medium text-white opacity-100 text-shadow-md">
           Submit
         </span>
-        <span className="second pointer-events-none absolute inset-0 flex h-full w-56 items-center justify-center whitespace-nowrap opacity-0 text-shadow-md font-medium blur-[10px] text-white">
+        <span className="second pointer-events-none absolute inset-0 flex h-full w-56 items-center justify-center font-medium whitespace-nowrap text-white opacity-0 blur-[10px] text-shadow-md">
           Submitting your form...
         </span>
         <svg

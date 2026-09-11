@@ -1,3 +1,7 @@
+import React from "react";
+
+import { IconCircleDashedCheck } from "@tabler/icons-react";
+
 import {
   InstaIcon,
   MetaIcon,
@@ -5,9 +9,7 @@ import {
   SlackIcon,
   UsersIcon,
 } from "@/components/svgs/svgs";
-import { cn } from "../../../../../lib/utils";
-import { IconCircleDashedCheck } from "@tabler/icons-react";
-import React from "react";
+import { cn } from "@/lib/utils";
 
 export const SkeletonTwo = () => {
   return (
@@ -71,7 +73,7 @@ const SkeletonCard = ({
     <div
       className={cn(
         "mx-auto my-auto h-fit w-full max-w-[85%] rounded-2xl border border-neutral-200 bg-neutral-100 p-3 shadow-2xl dark:border-neutral-700",
-        className,
+        className
       )}
     >
       <div className="flex items-center gap-3 text-black">
@@ -100,7 +102,7 @@ const RevolvingCard = ({
     <div
       className={cn(
         "animate-orbit absolute inset-0 m-auto flex size-10 items-center justify-center rounded-sm border border-transparent bg-white ring-1 shadow-black/10 ring-black/10 [--orbit-duration:10s] [--translate-position:120px]",
-        className,
+        className
       )}
     >
       {children}
@@ -119,7 +121,7 @@ const Circle = ({
     <div
       className={cn(
         "absolute inset-0 z-[10] m-auto size-40 rounded-full border border-transparent bg-white",
-        className,
+        className
       )}
     >
       {children}

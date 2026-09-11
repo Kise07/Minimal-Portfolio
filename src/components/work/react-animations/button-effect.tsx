@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+
 import { Dots } from "../minimal/dot-patterns";
 
 export const ButtonEffect = () => {
@@ -28,13 +29,13 @@ export const ButtonEffect = () => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="group relative text-neutral-500 px-12 py-4 rounded-lg bg-background shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_1px_2px_0px_rgba(255,255,255,0.1)_inset]"
+        className="group bg-background relative rounded-lg px-12 py-4 text-neutral-500 shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_1px_2px_0px_rgba(255,255,255,0.1)_inset]"
       >
-        <span className="group-hover:text-cyan-500 transition-colors duration-300">
+        <span className="transition-colors duration-300 group-hover:text-cyan-500">
           Button
         </span>
-        <span className="absolute inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-px w-3/4 mx-auto"></span>
-        <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent h-[4px] w-full mx-auto blur-sm"></span>
+        <span className="absolute inset-x-0 bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></span>
+        <span className="absolute inset-x-0 bottom-px mx-auto h-[4px] w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></span>
       </motion.button>
     </Dots>
   );

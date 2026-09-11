@@ -1,6 +1,7 @@
 "use client";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
+
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 
 export const Xanimation = () => {
   return (

@@ -1,13 +1,14 @@
 "use client";
 
 import { LayoutGroup, motion } from "motion/react";
-import { cn } from "../../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export default function StackedItems() {
   const stack: string[] = ["React", "Next.js", "Tailwind CSS"];
 
   return (
-    <div className="mt-2 max-w-56 flex-wrap w-full mx-auto gap-1 flex h-full items-center justify-center">
+    <div className="mx-auto mt-2 flex h-full w-full max-w-56 flex-wrap items-center justify-center gap-1">
       <LayoutGroup>
         {stack.map((item, idx) => (
           <StackItem
@@ -48,7 +49,7 @@ const StackItem = ({
       initial="initial"
       className={cn(
         "flex items-center justify-start rounded-full border border-neutral-200 bg-neutral-100 p-1 text-base text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800",
-        className,
+        className
       )}
     >
       <motion.span

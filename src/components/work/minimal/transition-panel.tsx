@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+
 import { IconBrandGithub, IconLink } from "@tabler/icons-react";
 import {
   AnimatePresence,
@@ -7,8 +9,8 @@ import {
   Transition,
   Variant,
 } from "motion/react";
-import { useState } from "react";
-import { cn } from "../../../../lib/utils";
+
+import { cn } from "@/lib/utils";
 
 export function TabsTransitionPanel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -61,7 +63,7 @@ export function TabsTransitionPanel() {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`capitalize rounded-md px-3 py-1 text-sm font-medium ${
+            className={`rounded-md px-3 py-1 text-sm font-medium capitalize ${
               activeIndex === index
                 ? "bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
                 : "bg-zinc-100 text-zinc-600 dark:bg-zinc-700 dark:text-zinc-400"
@@ -84,14 +86,14 @@ export function TabsTransitionPanel() {
           {ITEMS.map((item, index) => (
             <div
               key={index}
-              className="py-2 space-y-3 text-zinc-600 dark:text-zinc-400"
+              className="space-y-3 py-2 text-zinc-600 dark:text-zinc-400"
             >
               <div className="flex gap-4 text-sm">
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-zinc-900 dark:text-zinc-100 hover:underline-none border rounded-md p-1"
+                  className="hover:underline-none rounded-md border p-1 text-zinc-900 dark:text-zinc-100"
                 >
                   <IconLink className="size-4" />
                 </a>
@@ -100,7 +102,7 @@ export function TabsTransitionPanel() {
                     href={item.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-zinc-900 dark:text-zinc-100 hover:underline-none border rounded-md p-1"
+                    className="hover:underline-none rounded-md border p-1 text-zinc-900 dark:text-zinc-100"
                   >
                     <IconBrandGithub className="size-4" />
                   </a>
@@ -117,7 +119,7 @@ export function TabsTransitionPanel() {
                 {item.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-full text-[11px]"
+                    className="rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   >
                     {t}
                   </span>

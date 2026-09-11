@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { motion } from "motion/react";
 
 const positions = [
@@ -34,7 +35,7 @@ export const MovingAvatar = () => {
         }}
         src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="avatar"
-        className="absolute size-10 rounded-full shadow-sm shadow-black/10 ring-7 ring-black/10"
+        className="absolute size-10 rounded-full shadow-sm ring-7 shadow-black/10 ring-black/10"
       />
     </div>
   );
