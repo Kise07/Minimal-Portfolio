@@ -7,12 +7,11 @@ import {
   CardsGrid,
   DotPatterns,
   ExpendedButtons,
-  FirstSkeletonOne,
   FirstSkeletonTwo,
   HoverExit,
   InfiniteSliderVertical,
   LayoutCards,
-  MagneticButton,
+  MagneticButtonDemo,
   MovingAvatar,
   NavbarLayout,
   SecondSkeletonOne,
@@ -66,17 +65,12 @@ export const WORKS = [
   { name: "Animate Text", category: "Text Animation", component: AnimateText },
   {
     name: "Web UI-1",
-    category: "Cards Designs",
-    component: FirstSkeletonOne,
-  },
-  {
-    name: "Web UI-2",
     category: "Card Hover Effect",
     component: FirstSkeletonTwo,
   },
   {
-    name: "Web UI-3",
-    category: "Card Hover Effect",
+    name: "Web UI-2",
+    category: "Card Auto Effect",
     component: SecondSkeletonOne,
   },
   {
@@ -107,7 +101,7 @@ export const WORKS = [
   {
     name: "Magnetic Button",
     category: "Cursor Interaction",
-    component: MagneticButton,
+    component: MagneticButtonDemo,
   },
   {
     name: "Text Loop",
@@ -142,7 +136,6 @@ export const WORKS = [
     component: MovingAvatar,
   },
   { name: "Cards Grid", category: "Layout Animation", component: CardsGrid },
-  { name: "Layout Cards", category: "Shared Layout", component: LayoutCards },
   {
     name: "Expanded Buttons",
     category: "Toggle Animation",

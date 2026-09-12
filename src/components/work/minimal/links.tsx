@@ -6,22 +6,18 @@ import {
   IconBrandX,
 } from "@tabler/icons-react";
 
-import { Dots } from "./dot-patterns";
-
 export const UsersLinks = () => {
   return (
-    <Dots className="px-4 py-2">
-      <div className="flex items-center justify-center gap-4">
-        <Link href="https://x.com/sebas_azmi07">
-          <IconBrandX className="size-5 text-neutral-500 hover:text-neutral-900" />
-        </Link>
-        <Link href="https://linkedin.com/in/kise07">
-          <IconBrandLinkedin className="size-5 text-neutral-500 hover:text-neutral-900" />
-        </Link>
-        <Link href="https://github.com/kise07">
-          <IconBrandGithub className="size-5 text-neutral-500 hover:text-neutral-900" />
-        </Link>
-      </div>
-    </Dots>
+    <div className="flex items-center justify-center gap-4">
+      <Link href="https://x.com/sebas_azmi07">
+        <IconBrandX className="size-5 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100" />
+      </Link>
+      <Link href="https://linkedin.com/in/kise07">
+        <IconBrandLinkedin className="size-5 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100" />
+      </Link>
+      <Link href="https://github.com/kise07">
+        <IconBrandGithub className="size-5 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100" />
+      </Link>
+    </div>
   );
 };

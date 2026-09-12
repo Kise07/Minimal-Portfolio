@@ -110,7 +110,7 @@ export function TabsTransitionPanel() {
               </div>
 
               <p className="text-xl">{item.description}</p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1 text-base">
                 {item.highlights.map((point, i) => (
                   <li key={i}>• {point}</li>
                 ))}
@@ -119,7 +119,7 @@ export function TabsTransitionPanel() {
                 {item.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                    className="rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   >
                     {t}
                   </span>

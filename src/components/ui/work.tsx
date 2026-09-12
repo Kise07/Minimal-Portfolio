@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
+import { MagneticButton } from "../work";
 import { TransitionPanel } from "../work/minimal/transition-panel";
 import { ProjectCard, PROJECTS } from "./project-card";
 import { ResumeViewer } from "./resume-viewer";
@@ -33,7 +34,7 @@ export const Works = ({ className }: { className?: string }) => {
               }}
               onMouseEnter={() => setHoveredTab(index)}
               onMouseLeave={() => setHoveredTab(null)}
-              className="relative z-20 px-4 py-2 text-sm font-medium"
+              className="relative z-20 rounded-full px-4 py-2 text-sm font-medium"
             >
               {(hoveredTab === index || activeTab === index) && (
                 <motion.div
@@ -45,7 +46,7 @@ export const Works = ({ className }: { className?: string }) => {
               )}
               <span
                 className={cn(
-                  "relative z-20 px-10 py-20 transition-colors duration-200",
+                  "relative z-20 px-10 transition-colors duration-200",
                   activeTab === index && !showResume
                     ? "text-sm font-medium text-neutral-100 dark:text-neutral-900"
                     : "text-sm font-medium text-neutral-500 dark:text-neutral-400"
@@ -58,17 +59,13 @@ export const Works = ({ className }: { className?: string }) => {
         </div>
 
         {/* Resume button */}
-        <button
+        <MagneticButton
           onClick={() => setShowResume(true)}
-          className={cn(
-            "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-            showResume
-              ? "bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900"
-              : "text-neutral-500 hover:bg-neutral-200 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
-          )}
+          active={showResume}
+          className="px-4 py-1.5"
         >
           Resume
-        </button>
+        </MagneticButton>
       </div>
 
       {/* Content */}

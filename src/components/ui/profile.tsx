@@ -17,7 +17,7 @@ export const Profile = ({ className }: { className?: string }) => {
       )}
     >
       <div className="flex w-full items-start justify-between">
-        <div className="flex flex-col items-center gap-4">
+        <div className="my-2 flex flex-col items-center gap-4">
           <Image
             src="/ava.png"
             alt="avatar"
