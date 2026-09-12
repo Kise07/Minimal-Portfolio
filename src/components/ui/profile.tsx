@@ -18,7 +18,13 @@ export const Profile = ({ className }: { className?: string }) => {
     >
       <div className="flex w-full items-start justify-between">
         <div className="flex flex-col items-center gap-4">
-          <Image src="/ava.png" alt="avatar" width={30} height={30} />
+          <Image
+            src="/ava.png"
+            alt="avatar"
+            width={500}
+            height={500}
+            className="size-30"
+          />
           <span>
             Connect with me <UsersLinks />
           </span>
