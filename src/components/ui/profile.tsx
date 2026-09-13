@@ -10,29 +10,53 @@ import { ModeToggle } from "./theme-toggle";
 
 export const Profile = ({ className }: { className?: string }) => {
   return (
-    <section
-      className={cn(
-        "m-6 flex flex-col items-baseline justify-start gap-4",
-        className
-      )}
-    >
-      <div className="flex w-full items-start justify-between">
-        <div className="my-2 flex flex-col items-center gap-4">
+    <section className={cn("m-6", className)}>
+      {/* New Idea */}
+      <div
+        className="mb-8 grid gap-4"
+        style={{
+          gridTemplateAreas: `
+          "avatar toggle"
+          "avatar links"
+          `,
+          gridTemplateColumns: "auto 1fr",
+          gridTemplateRows: "1fr 1fr",
+        }}
+      >
+        {/* Avatar area - left, spans 2 rows */}
+        <div
+          style={{ gridArea: "avatar" }}
+          className="flex flex-col items-center justify-center gap-4"
+        >
           <Image
             src="/ava.png"
             alt="avatar"
             width={500}
             height={500}
-            className="size-30"
+            className="size-20 md:size-30"
           />
-          <span>
+          <Heading>Shabaz Ansari</Heading>
+        </div>
+
+        {/* Toggle area - top right */}
+        <div
+          style={{ gridArea: "toggle" }}
+          className="flex items-start justify-end"
+        >
+          <ModeToggle />
+        </div>
+
+        {/* Links area - bottom right */}
+        <div
+          style={{ gridArea: "links" }}
+          className="flex items-center justify-end"
+        >
+          <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
             Connect with me <UsersLinks />
           </span>
         </div>
-        <ModeToggle />
       </div>
-      <Heading>Shabaz Ansari</Heading>
-      <Flipper />
+      {/* New Implementation */}
       <TabsTransitionPanel />
     </section>
   );
