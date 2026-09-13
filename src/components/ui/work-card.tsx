@@ -10,7 +10,6 @@ import {
   FirstSkeletonTwo,
   HoverExit,
   InfiniteSliderVertical,
-  LayoutCards,
   MagneticButtonDemo,
   MovingAvatar,
   NavbarLayout,
