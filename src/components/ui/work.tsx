@@ -24,7 +24,7 @@ export const Works = ({ className }: { className?: string }) => {
       {/* Header: tabs left, Resume button right */}
       <div className="mb-4 flex items-center justify-between">
         {/* Sliding pill tabs */}
-        <div className="flex w-fit rounded-full bg-neutral-200 p-1 dark:bg-neutral-800">
+        <div className="flex w-fit rounded-xl bg-neutral-200 p-1 dark:bg-neutral-800">
           {TABS.map((tab, index) => (
             <button
               key={tab}
@@ -34,12 +34,12 @@ export const Works = ({ className }: { className?: string }) => {
               }}
               onMouseEnter={() => setHoveredTab(index)}
               onMouseLeave={() => setHoveredTab(null)}
-              className="relative z-20 rounded-full px-4 py-2 text-sm font-medium"
+              className="relative z-20 rounded-xl p-1 text-sm md:px-4 md:py-2 md:font-medium"
             >
               {(hoveredTab === index || activeTab === index) && (
                 <motion.div
                   layoutId="work-tab"
-                  className="absolute inset-0 rounded-full bg-neutral-900 dark:bg-neutral-100"
+                  className="absolute inset-0 rounded-xl bg-neutral-900 dark:bg-neutral-100"
                   style={{ opacity: showResume ? 0 : 1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 />
@@ -62,7 +62,7 @@ export const Works = ({ className }: { className?: string }) => {
         <MagneticButton
           onClick={() => setShowResume(true)}
           active={showResume}
-          className="px-4 py-1.5"
+          className="px-4 py-2"
         >
           Resume
         </MagneticButton>

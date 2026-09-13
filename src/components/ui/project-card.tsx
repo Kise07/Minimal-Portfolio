@@ -12,7 +12,7 @@ export const ProjectCard = ({
           loop
           muted
           playsInline
-          className="h-full object-cover"
+          className="h-full md:object-cover"
         />
       </div>
       <div className="mt-3 flex items-center justify-between">
