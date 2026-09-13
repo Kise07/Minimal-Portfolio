@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 
 import { Heading } from "../core/heading";
 import { UsersLinks } from "../work/minimal/links";
-import Flipper from "../work/minimal/text-flipper";
 import { TabsTransitionPanel } from "../work/minimal/transition-panel";
 import { ModeToggle } from "./theme-toggle";
 
