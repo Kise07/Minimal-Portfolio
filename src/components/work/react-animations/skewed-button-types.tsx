@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "motion/react";
 
-const scale = { scale: 0.95 };
 export const SkewedButtonSecond = () => {
   return (
     <div className="flex h-full w-full items-center justify-center text-sm md:text-xl">
@@ -15,13 +14,12 @@ export const SkewedButtonSecond = () => {
   );
 };
 
+const rotate = { rotate: -10 };
 const First = () => {
   return (
     <motion.button
-      whileHover={{
-        rotate: -10,
-      }}
-      whileTap={scale}
+      whileHover={rotate}
+      whileTap={rotate}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Rotate
@@ -29,13 +27,12 @@ const First = () => {
   );
 };
 
+const translate = { x: -10 };
 const Second = () => {
   return (
     <motion.button
-      whileHover={{
-        x: -10,
-      }}
-      whileTap={scale}
+      whileHover={translate}
+      whileTap={translate}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate
@@ -43,13 +40,12 @@ const Second = () => {
   );
 };
 
+const translateY = { y: -10 };
 const Third = () => {
   return (
     <motion.button
-      whileHover={{
-        y: -10,
-      }}
-      whileTap={scale}
+      whileHover={translateY}
+      whileTap={translateY}
       className="relative rounded-full bg-linear-to-b from-blue-600 to-blue-500 px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Translate Y
@@ -57,16 +53,15 @@ const Third = () => {
   );
 };
 
+const bgColor = { backgroundColor: "var(--color-blue-400)" };
 const Fourth = () => {
   return (
     <motion.button
       initial={{
         backgroundColor: "var(--color-blue-500)",
       }}
-      whileHover={{
-        backgroundColor: "var(--color-blue-400)",
-      }}
-      whileTap={scale}
+      whileHover={bgColor}
+      whileTap={bgColor}
       className="relative rounded-full px-8 py-4 text-white shadow-[0px_2px_0px_0px_var(--color-blue-400)_inset] text-shadow-md"
     >
       Background

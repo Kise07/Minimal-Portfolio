@@ -3,7 +3,9 @@ import { cn } from "@/lib/utils";
 export const DotPatterns = () => {
   return (
     <Dots className="h-48 w-full rounded-full bg-neutral-900 text-neutral-100 dark:bg-neutral-700">
-      <span className="rounded-full p-2 hover:ring-2">Dot Patterns</span>
+      <span className="rounded-full p-2 transition-all duration-300 hover:scale-95 hover:outline active:scale-95 active:outline">
+        Dot Patterns
+      </span>
     </Dots>
   );
 };

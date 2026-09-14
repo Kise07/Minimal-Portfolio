@@ -15,7 +15,7 @@ export default function StackedItems() {
   ];
 
   return (
-    <div className="my-4 flex h-full w-full flex-wrap gap-1">
+    <div className="mx-auto mt-2 flex h-full w-full flex-wrap items-center justify-center gap-1">
       <LayoutGroup>
         {stack.map((item, idx) => (
           <StackItem

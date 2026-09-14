@@ -15,7 +15,8 @@ export const FirstSkeletonTwo = () => {
       }}
       className={cn(
         "group mx-auto my-auto flex h-65 w-full max-w-[55%] flex-col rounded-2xl border border-neutral-300 bg-neutral-100 p-3 shadow-2xl dark:border-neutral-700",
-        "[--pattern-fg:var(--color-neutral-950)]/5 dark:[--pattern-fg:var(--color-white)]/10"
+        "[--pattern-fg:var(--color-neutral-950)]/5 dark:[--pattern-fg:var(--color-white)]/10",
+        "transition-all duration-300 hover:scale-[0.95] active:scale-[0.95]"
       )}
     >
       <div className="flex items-center gap-3 text-base">
@@ -26,7 +27,7 @@ export const FirstSkeletonTwo = () => {
       </div>
       <div className="relative mt-4 flex-1 rounded-2xl border border-neutral-200 bg-neutral-200">
         <Pattern />
-        <div className="absolute inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100">
+        <div className="absolute inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 active:scale-[0.95]">
           <Row
             icon={<IconCheck className="size-3 fill-green-500 stroke-white" />}
             text="Fetching Data"
