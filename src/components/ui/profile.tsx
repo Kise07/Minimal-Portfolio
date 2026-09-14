@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { Heading } from "../core/heading";
 import { UsersLinks } from "../work/minimal/links";
+import { TechStack } from "../work/minimal/tech-stack";
 import { TabsTransitionPanel } from "../work/minimal/transition-panel";
 import { ModeToggle } from "./theme-toggle";
 
@@ -22,7 +23,7 @@ export const Profile = ({ className }: { className?: string }) => {
           gridTemplateRows: "1fr 1fr",
         }}
       >
-        {/* Avatar area - left, spans 2 rows */}
+        {/* 1. Avatar area - left, spans 2 rows */}
         <div
           style={{ gridArea: "avatar" }}
           className="flex flex-col items-center justify-center gap-4"
@@ -34,10 +35,11 @@ export const Profile = ({ className }: { className?: string }) => {
             height={500}
             className="size-20 md:size-30"
           />
+          {/* 2. Name - identity */}
           <Heading>Shabaz Ansari</Heading>
         </div>
 
-        {/* Toggle area - top right */}
+        {/* 3. Toggle area - top right */}
         <div
           style={{ gridArea: "toggle" }}
           className="flex items-start justify-end"
@@ -45,7 +47,7 @@ export const Profile = ({ className }: { className?: string }) => {
           <ModeToggle />
         </div>
 
-        {/* Links area - bottom right */}
+        {/* 4. Links area - bottom right */}
         <div
           style={{ gridArea: "links" }}
           className="flex items-center justify-end"
@@ -55,7 +57,11 @@ export const Profile = ({ className }: { className?: string }) => {
           </span>
         </div>
       </div>
-      {/* New Implementation */}
+
+      {/* 5. Tech Stack - keywords for recruiters */}
+      <TechStack />
+
+      {/* 6. New Implementation */}
       <TabsTransitionPanel />
     </section>
   );
