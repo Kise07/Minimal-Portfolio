@@ -20,9 +20,16 @@ export const Works = ({ className }: { className?: string }) => {
   const [showResume, setShowResume] = useState(false);
 
   return (
-    <div className={cn("col-span-2 m-4 flex flex-col", className)}>
+    <div
+      className={cn("mx-4 flex flex-col", "h-[calc(100vh-2rem)]", className)}
+    >
       {/* Header: tabs left, Resume button right */}
-      <div className="mb-4 flex items-center justify-between">
+      <div
+        className={cn(
+          "my-4 flex items-center justify-between",
+          "sticky top-4 z-10"
+        )}
+      >
         {/* Sliding pill tabs */}
         <div className="flex w-fit rounded-xl bg-neutral-200 p-1 dark:bg-neutral-800">
           {TABS.map((tab, index) => (
@@ -69,7 +76,7 @@ export const Works = ({ className }: { className?: string }) => {
       </div>
 
       {/* Content */}
-      <div className="overflow-hidden">
+      <div className="flex-1 scrollbar-none overflow-y-auto">
         {showResume ? (
           <div className="h-[calc(100vh-12rem)]">
             <ResumeViewer />
@@ -85,8 +92,8 @@ export const Works = ({ className }: { className?: string }) => {
             }}
           >
             {/* Works tab — scrollable card list */}
-            <div className="max-h-[calc(100vh-12rem)] scrollbar-none overflow-y-auto">
-              <div className="grid auto-rows-[500px] grid-cols-1 gap-4 py-2">
+            <div className="scrollbar-none overflow-y-auto pb-4">
+              <div className="grid auto-rows-[700px] grid-cols-1 gap-4">
                 {WORKS.map((work) => (
                   <WorkCard key={work.name} {...work} />
                 ))}
@@ -94,8 +101,8 @@ export const Works = ({ className }: { className?: string }) => {
             </div>
 
             {/* Projects tab */}
-            <div className="max-h-[calc(100vh-12rem)] scrollbar-none overflow-y-auto">
-              <div className="grid auto-rows-[500px] grid-cols-1 gap-4 py-2">
+            <div className="scrollbar-none overflow-y-auto pb-4">
+              <div className="grid auto-rows-[700px] grid-cols-1 gap-4">
                 {PROJECTS.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
