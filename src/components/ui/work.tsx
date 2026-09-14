@@ -78,7 +78,7 @@ export const Works = ({ className }: { className?: string }) => {
       {/* Content */}
       <div className="flex-1 scrollbar-none overflow-y-auto">
         {showResume ? (
-          <div className="h-[calc(100vh-12rem)]">
+          <div className="h-[calc(100vh-0rem)]">
             <ResumeViewer />
           </div>
         ) : (
