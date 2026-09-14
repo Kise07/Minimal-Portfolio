@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Minimal Portfolio
+
+A minimal, animation-rich developer portfolio built with Next.js and Motion.
+Showcases 18 interactive UI demos — from magnetic buttons to 3D card transforms.
+
+**Live Demo:** [your-domain.com](https://your-domain.com)
+
+---
+
+## Tech Stack
+
+| Category  | Technology              |
+| --------- | ----------------------- |
+| Framework | Next.js 16 (App Router) |
+| Language  | TypeScript              |
+| Styling   | Tailwind CSS v4         |
+| Animation | Motion (Framer Motion)  |
+| Icons     | Tabler Icons, Lucide    |
+| Dark Mode | next-themes             |
+| Font      | Poppins (Google Fonts)  |
+
+---
+
+## Highlights
+
+- **18 animation demos** — blur-in text, 3D transforms, layout animations, spring physics, infinite sliders
+- **Magnetic cursor** — spring-based button that follows the mouse
+- **3D card transforms** — perspective rotateX/Z with hover and tap states
+- **Layout animations** — shared layout transitions between states
+- **Dark mode** — full light/dark theme with system preference detection
+- **Mobile-ready** — `whileTap` effects for touch devices
+
+---
+
+## Features
+
+### Animations
+
+- Staggered text blur-in on scroll
+- Multi-step purchase/submit button sequences
+- Infinite vertical slider (album covers)
+- Text loop and flipper effects
+- Orbital icon animation (CSS-only)
+
+### Interactions
+
+- Magnetic cursor-following button
+- macOS-style arc dock cards (drag to rearrange)
+- Mouse-tracking radial gradient (X/Twitter logo)
+- Hover-exit card reveal
+
+### Layouts
+
+- Layout-animated tab system with sliding pill indicator
+- Avatar grid with expand/collapse transitions
+- Auto-stacking cards with interval reveal
+- Smooth navbar with hover indicator
+
+### UI Components
+
+- Profile sidebar with tech stack showcase
+- Resume viewer (embedded PDF)
+- Project cards with video demos
+- Theme toggle with icon rotation
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- Bun (recommended) or npm
+
+### Install
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/yourusername/Minimal-Portfolio.git
+cd Minimal-Portfolio
+bun install
+```
+
+### Development
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun build
+bun start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                  # Pages (/, /work)
+├── components/
+│   ├── core/             # Layout primitives
+│   ├── ui/               # Profile, Works, Cards
+│   ├── work/             # 18 animation demos
+│   │   ├── arc/          # Dock cards
+│   │   ├── features/     # Card effects
+│   │   ├── layouts/      # Layout animations
+│   │   ├── minimal/      # Buttons, sliders, text
+│   │   └── react-animations/  # 3D transforms
+│   └── svgs/             # Custom SVG icons
+└── lib/                  # Utilities
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Name** — [your-email]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: [yourusername](https://github.com/yourusername)
+- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
+- X: [your-handle](https://x.com/your-handle)
