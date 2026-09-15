@@ -29,7 +29,7 @@ export const FirstSkeletonTwo = () => {
         <Pattern />
         <div
           className={cn(
-            "w-fulloverflow-hidden absolute inset-0 h-full rounded-2xl border border-neutral-200 bg-white transition-all duration-300",
+            "absolute inset-0 h-full w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300",
             "translate-x-12 -translate-y-2 scale-110",
             "group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 active:scale-[0.95]",
             "group-active:translate-x-0 group-active:-translate-y-0 group-active:scale-100 active:scale-[0.95]"
