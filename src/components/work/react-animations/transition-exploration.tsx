@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const rotate = { rotateX: 40 };
 export const TransitionExploration = () => {
   return (
-    <div className="h-full w-full items-center justify-center">
+    <div className="items-center justify-center lg:h-full lg:w-full">
       <div className="mx-auto grid max-w-sm grid-cols-2 gap-10 py-10">
         <First />
         <Second />
