@@ -76,7 +76,7 @@ export const Card = () => {
                 <IconX className="h-3 w-3 text-neutral-400" />
               </button>
             </div>
-            <div className="relative mt-4 flex-1 rounded-lg border border-dashed border-neutral-200 bg-gray-100">
+            <div className="relative mt-4 flex-1 overflow-hidden rounded-lg border border-dashed border-neutral-200 bg-gray-100">
               {/* Motion Divs here */}
               <motion.div
                 initial={{

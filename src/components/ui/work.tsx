@@ -31,7 +31,7 @@ export const Works = ({ className }: { className?: string }) => {
         )}
       >
         {/* Sliding pill tabs */}
-        <div className="flex w-fit rounded-xl bg-neutral-200 p-1 dark:bg-neutral-800">
+        <div className="flex w-fit rounded-full bg-neutral-200 p-1 dark:bg-neutral-800">
           {TABS.map((tab, index) => (
             <button
               key={tab}
@@ -41,19 +41,19 @@ export const Works = ({ className }: { className?: string }) => {
               }}
               onMouseEnter={() => setHoveredTab(index)}
               onMouseLeave={() => setHoveredTab(null)}
-              className="relative z-20 rounded-xl p-1 text-sm md:px-4 md:py-2 md:font-medium"
+              className="relative z-20 rounded-full p-1 text-sm md:px-4 md:py-1 md:font-medium"
             >
               {(hoveredTab === index || activeTab === index) && (
                 <motion.div
                   layoutId="work-tab"
-                  className="absolute inset-0 rounded-xl bg-neutral-900 dark:bg-neutral-100"
+                  className="absolute inset-0 rounded-full bg-neutral-900 dark:bg-neutral-100"
                   style={{ opacity: showResume ? 0 : 1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 />
               )}
               <span
                 className={cn(
-                  "relative z-20 px-10 transition-colors duration-200",
+                  "relative z-20 px-4 transition-colors duration-200 md:px-8",
                   activeTab === index && !showResume
                     ? "text-sm font-medium text-neutral-100 dark:text-neutral-900"
                     : "text-sm font-medium text-neutral-500 dark:text-neutral-400"
