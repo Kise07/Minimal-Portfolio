@@ -7,7 +7,7 @@ export const TestSectionHeading = () => {
   return (
     <SectionHeadingStyle
       delay={0}
-      className="p-4 text-neutral-900 dark:text-neutral-500"
+      className="p-4 text-neutral-800 dark:text-neutral-200"
     >
       Section Heading
     </SectionHeadingStyle>

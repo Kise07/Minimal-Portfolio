@@ -14,7 +14,6 @@ import {
 } from "@tabler/icons-react";
 import { arc, motion } from "motion/react";
 
-const scale = { scale: 0.95 };
 const cardImage =
   "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -210,7 +209,6 @@ function StackCards({
               whileHover={{
                 scale: 1.02,
               }}
-              whileTap={scale}
               transition={{
                 path: arcPath,
               }}

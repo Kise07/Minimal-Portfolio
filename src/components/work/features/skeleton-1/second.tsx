@@ -27,7 +27,14 @@ export const FirstSkeletonTwo = () => {
       </div>
       <div className="relative mt-4 flex-1 rounded-2xl border border-neutral-200 bg-neutral-200">
         <Pattern />
-        <div className="absolute inset-0 h-full w-full translate-x-12 -translate-y-2 scale-110 overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300 group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 active:scale-[0.95]">
+        <div
+          className={cn(
+            "w-fulloverflow-hidden absolute inset-0 h-full rounded-2xl border border-neutral-200 bg-white transition-all duration-300",
+            "translate-x-12 -translate-y-2 scale-110",
+            "group-hover:translate-x-0 group-hover:-translate-y-0 group-hover:scale-100 active:scale-[0.95]",
+            "group-active:translate-x-0 group-active:-translate-y-0 group-active:scale-100 active:scale-[0.95]"
+          )}
+        >
           <Row
             icon={<IconCheck className="size-3 fill-green-500 stroke-white" />}
             text="Fetching Data"

@@ -35,7 +35,10 @@ export const WorkCard = ({
   const [key, setKey] = useState(0);
 
   return (
-    <div className="flex flex-col rounded-xl border border-neutral-200 bg-neutral-50 p-2 dark:border-neutral-800 dark:bg-neutral-900">
+    <div
+      onContextMenu={(e) => e.preventDefault()}
+      className="flex flex-col rounded-xl border border-neutral-200 bg-neutral-50 p-2 select-none dark:border-neutral-800 dark:bg-neutral-900"
+    >
       <div className="flex flex-1 items-center justify-center overflow-hidden rounded-lg">
         <Component key={key} />
       </div>

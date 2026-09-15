@@ -93,7 +93,7 @@ export const Works = ({ className }: { className?: string }) => {
           >
             {/* Works tab — scrollable card list */}
             <div className="scrollbar-none overflow-y-auto pb-4">
-              <div className="grid auto-rows-[700px] grid-cols-1 gap-4">
+              <div className="grid auto-rows-[400px] grid-cols-1 gap-4 lg:auto-rows-[700px]">
                 {WORKS.map((work) => (
                   <WorkCard key={work.name} {...work} />
                 ))}
@@ -102,7 +102,7 @@ export const Works = ({ className }: { className?: string }) => {
 
             {/* Projects tab */}
             <div className="scrollbar-none overflow-y-auto pb-4">
-              <div className="grid auto-rows-[700px] grid-cols-1 gap-4">
+              <div className="grid auto-rows-[400px] grid-cols-1 gap-4 lg:auto-rows-[700px]">
                 {PROJECTS.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}

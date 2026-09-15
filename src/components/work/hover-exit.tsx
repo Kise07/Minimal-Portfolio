@@ -51,7 +51,7 @@ export const Card = () => {
               ease: "easeInOut",
             }}
             className={cn(
-              "h-[28rem] min-h-[26rem] w-72 rounded-xl bg-white",
+              "h-[22rem] w-72 rounded-xl bg-white md:h-[28rem] md:min-h-[26rem]",
               "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
               "flex flex-col p-6"
             )}

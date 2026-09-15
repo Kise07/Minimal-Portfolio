@@ -39,7 +39,7 @@ export const NavbarLayout = () => {
             onClick={() => setIsActive(item.href)}
             className={cn(
               "relative rounded-full px-4 py-2 text-sm font-medium text-neutral-500 transition-colors duration-200 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100",
-              "transition-all duration-300 hover:scale-95 active:scale-95"
+              "transition-all duration-300 hover:scale-95 active:scale-95 active:hover:text-neutral-900 active:dark:hover:text-neutral-100"
             )}
           >
             {isActive === item.href ? <span /> : null}

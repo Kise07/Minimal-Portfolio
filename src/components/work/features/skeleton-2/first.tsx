@@ -87,7 +87,7 @@ export const SecondSkeletonOne = () => {
   return (
     <motion.div
       ref={ref}
-      className="relative inset-x-0 mx-auto flex h-full w-full max-w-[20rem] flex-1 flex-col gap-2 rounded-3xl border border-neutral-200 bg-neutral-100 p-2 lg:max-w-sm"
+      className="relative inset-x-0 mx-auto flex h-full max-w-[20rem] flex-1 flex-col gap-2 rounded-3xl border border-neutral-200 bg-neutral-100 p-2 lg:w-full"
     >
       {actveCard?.map((item) => (
         <Card key={item?.title} {...item} />
@@ -139,11 +139,11 @@ const Card = ({
         {topIcon}
       </div>
       <div>
-        <p className="text-lg font-bold text-neutral-800">{title}</p>
-        <p className="text-sm text-balance text-neutral-600 md:text-base">
+        <p className="text-sm font-bold text-neutral-800 lg:text-lg">{title}</p>
+        <p className="text-[10px] text-balance text-neutral-600 lg:text-sm">
           {description}
         </p>
-        <div className="mt-2 flex flex-row flex-wrap gap-2 text-sm text-neutral-600">
+        <div className="mt-2 flex flex-row flex-wrap gap-2 text-[8px] text-neutral-600 lg:text-sm">
           {tags.map((tag) => (
             <Tag key={tag.text} text={tag.text} icon={tag.icon} />
           ))}
