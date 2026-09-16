@@ -11,6 +11,33 @@ import {
 
 import { cn } from "@/lib/utils";
 
+export function Role({ className }: { className?: string }) {
+  return (
+    <TextLoop className={cn("font-mono", className)}>
+      <span>Software Engineer</span>
+      <span>Design Engineer</span>
+      <span>Full Stack Developer</span>
+      <span>Front-end Developer</span>
+      <span>Creative Coder</span>
+    </TextLoop>
+  );
+}
+
+export function Greetings({ className }: { className?: string }) {
+  return (
+    <TextLoop className={cn("font-medium", className)}>
+      <span>Hello,</span>
+      <span>Hola,</span>
+      <span>Bonjour,</span>
+      <span>Ciao,</span>
+      <span>Olá,</span>
+      <span>こんにちは,</span>
+      <span>안녕하세요,</span>
+      <span>नमस्ते,</span>
+    </TextLoop>
+  );
+}
+
 export function TextLoopBasic() {
   return (
     <TextLoop className="font-mono text-sm md:text-xl">

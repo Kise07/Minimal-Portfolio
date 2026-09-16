@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 import { Heading } from "../core/heading";
+import { IntroLines } from "../work/minimal/intro-lines";
 import { UsersLinks } from "../work/minimal/links";
 import { TechStack } from "../work/minimal/tech-stack";
 import { TabsTransitionPanel } from "../work/minimal/transition-panel";
@@ -58,10 +59,13 @@ export const Profile = ({ className }: { className?: string }) => {
         </div>
       </div>
 
-      {/* 5. Tech Stack - keywords for recruiters */}
+      {/* 5. Intro - short description */}
+      <IntroLines className="mb-2" />
+
+      {/* 6. Tech Stack - keywords for recruiters */}
       <TechStack />
 
-      {/* 6. New Implementation */}
+      {/* 7. New Implementation */}
       <TabsTransitionPanel />
     </section>
   );
