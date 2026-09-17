@@ -34,7 +34,7 @@ export const Profile = ({ className }: { className?: string }) => {
             alt="avatar"
             width={500}
             height={500}
-            className="size-20 md:size-30"
+            className="size-20"
           />
           {/* 2. Name - identity */}
           <Heading>Shabaz Ansari</Heading>
