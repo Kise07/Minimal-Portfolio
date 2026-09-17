@@ -23,9 +23,9 @@ The portfolio also showcases projects I have built and deployed.
 
 ## Preview
 
-<!-- Add your best screenshot or GIF here -->
-
 ![Minimal Portfolio Preview](./public/preview.png)
+
+[▶ Watch the interactive demo](https://github.com/user-attachments/assets/fc08d972-cdaa-4bca-a111-18442b5e3487)
 
 ---
 
