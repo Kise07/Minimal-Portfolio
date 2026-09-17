@@ -6,9 +6,9 @@ import { Greetings, Role } from "./text-loop";
 export const IntroLines = ({ className }: { className?: string }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+      initial={{ opacity: 0, filter: "blur(10px)", y: -10 }}
       whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-      transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
       viewport={{ once: true }}
       className={"text-sm text-neutral-600 dark:text-neutral-400 " + className}
     >
