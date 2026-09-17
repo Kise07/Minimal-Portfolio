@@ -11,7 +11,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,mdx,css}\"",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "check-types": "tsc --noEmit"
+    "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.46.0",
