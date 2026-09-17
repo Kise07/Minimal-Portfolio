@@ -53,7 +53,7 @@ export const Profile = ({ className }: { className?: string }) => {
           style={{ gridArea: "links" }}
           className="flex items-center justify-end"
         >
-          <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+          <span className="text-sm font-medium text-neutral-500 dark:text-neutral-200">
             Connect with me <UsersLinks />
           </span>
         </div>

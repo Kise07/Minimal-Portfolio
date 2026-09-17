@@ -25,7 +25,12 @@ export function Role({ className }: { className?: string }) {
 
 export function Greetings({ className }: { className?: string }) {
   return (
-    <TextLoop className={cn("font-medium", className)}>
+    <TextLoop
+      className={cn(
+        "text-base text-neutral-500 italic dark:text-neutral-200",
+        className
+      )}
+    >
       <span>Hello,</span>
       <span>Hola,</span>
       <span>Bonjour,</span>

@@ -16,7 +16,7 @@ export const IntroLines = ({ className }: { className?: string }) => {
       <Greetings className="mb-4" />
       <div>
         <span className="tracking-wide text-pretty md:text-balance">
-          I&apos;m a{" "}
+          I&apos;m Shabaz a{" "}
           <Role className="mx-2 rounded-md px-2 py-0.5 text-sm shadow-sm ring-1 shadow-black/50 ring-black/10 sm:order-last sm:mx-0 sm:mb-0 dark:shadow-white/50 dark:ring-white/10" />{" "}
           .
           <br />I enjoy taking an idea, breaking it down, and turning it into
