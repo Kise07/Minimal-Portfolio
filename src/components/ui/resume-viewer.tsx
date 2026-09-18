@@ -2,7 +2,7 @@
 
 import { IconDownload } from "@tabler/icons-react";
 
-const GOOGLE_DRIVE_FILE_ID = "1VLflrU0gJYBwYd8XkgX-sBC4Vk1R0G1n";
+const GOOGLE_DRIVE_FILE_ID = "1GmFu5PtlqFborwLXViLCErUyrqXdm7pN";
 
 const embedUrl = `https://drive.google.com/file/d/${GOOGLE_DRIVE_FILE_ID}/preview`;
 const downloadUrl = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
