@@ -30,11 +30,11 @@ export const Profile = ({ className }: { className?: string }) => {
           className="flex flex-col items-center justify-center gap-4"
         >
           <Image
-            src="/ava.png"
+            src="https://pub-d3c342b4d8e242deb0f60d25f55981ac.r2.dev/images/png/avatar_variations_16_png/avatar_06.png"
             alt="avatar"
             width={500}
             height={500}
-            className="size-20"
+            className="size-20 rounded-2xl"
           />
           {/* 2. Name - identity */}
           <Heading>Shabaz Ansari</Heading>
